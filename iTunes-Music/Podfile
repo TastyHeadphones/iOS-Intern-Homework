@@ -1,0 +1,21 @@
+platform :ios, '13.0'
+use_frameworks!
+
+target 'iTunes-Music' do
+  pod 'IGListKit'
+  pod 'SnapKit'
+  pod 'Localize-Swift'
+  pod 'HandyJSON'
+
+  # Pods for iTunes-Music
+
+  target 'iTunes-MusicTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'iTunes-MusicUITests' do
+    # Pods for testing
+  end
+
+end
