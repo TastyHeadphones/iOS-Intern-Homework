@@ -1,0 +1,37 @@
+PODS:
+  - HandyJSON (5.0.2)
+  - IGListDiffKit (4.0.0)
+  - IGListKit (4.0.0):
+    - IGListDiffKit (= 4.0.0)
+  - Localize-Swift (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
+    - Localize-Swift/UIKit (= 3.2.0)
+  - Localize-Swift/LocalizeSwiftCore (3.2.0)
+  - Localize-Swift/UIKit (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - HandyJSON
+  - IGListKit
+  - Localize-Swift
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - HandyJSON
+    - IGListDiffKit
+    - IGListKit
+    - Localize-Swift
+    - SnapKit
+
+SPEC CHECKSUMS:
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
+  IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
+  Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 81e114c3f694bb94908d5b5bd7407cf1aefcc177
+
+COCOAPODS: 1.11.3
