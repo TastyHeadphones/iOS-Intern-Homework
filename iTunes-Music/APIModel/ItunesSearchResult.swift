@@ -6,13 +6,13 @@
 import Foundation
 
 // MARK: - ItunesSearchpResults
-struct ItunesSearchpResults {
+struct ItunesSearchpResults: Decodable {
     let resultCount: Int
     let results: [ItunesSearchpResult]
 }
 
 // MARK: - Result
-struct ItunesSearchpResult {
+struct ItunesSearchpResult: Decodable {
     let wrapperType: String
     let kind: String
     let artistId: Int?
@@ -32,7 +32,7 @@ struct ItunesSearchpResult {
     let artworkUrl100: String
     let collectionPrice: Double
     let trackPrice: Double
-    let releaseDate: Date
+    let releaseDate: String
     let collectionExplicitness: String
     let trackExplicitness: String
     let discCount: Int?

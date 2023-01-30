@@ -6,13 +6,13 @@
 import Foundation
 
 // MARK: - ItunesLookupResults
-struct ItunesLookupResults {
+struct ItunesLookupResults: Decodable {
     let resultCount: Int
     let results: [ItunesLookupResult]
 }
 
 // MARK: - Result
-struct ItunesLookupResult {
+struct ItunesLookupResult: Decodable {
     let wrapperType: String
     let artistType: String
     let artistName: String
