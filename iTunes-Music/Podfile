@@ -5,7 +5,7 @@ target 'iTunes-Music' do
   pod 'IGListKit'
   pod 'SnapKit'
   pod 'Localize-Swift'
-  pod 'HandyJSON'
+  pod 'Toast-Swift'
 
   # Pods for iTunes-Music
 

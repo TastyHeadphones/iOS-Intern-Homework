@@ -30,8 +30,6 @@ struct ItunesSearchpResult: Decodable {
     let artworkUrl30: String
     let artworkUrl60: String
     let artworkUrl100: String
-    let collectionPrice: Double
-    let trackPrice: Double
     let releaseDate: String
     let collectionExplicitness: String
     let trackExplicitness: String
