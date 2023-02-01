@@ -11,15 +11,25 @@ import IGListKit
 
 class SongSearchCell: UICollectionViewCell {
 
+    let containerView = UIView()
     let imageView = UIImageView()
     let collectionNameLabel = UILabel()
     let artistNameLabel = UILabel()
     let trackNameLabel = UILabel()
+    let separator: CALayer = {
+        let layer = CALayer()
+        layer.backgroundColor = UIColor.defaultSeparator.cgColor
+        return layer
+    }()
 
     func setupConstraints() {
+        containerView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(Spacing.xmedium.rawValue)
+            make.top.bottom.equalToSuperview().inset(Spacing.xsmall.rawValue)
+        }
         imageView.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(Spacing.medium.rawValue)
-            make.height.equalToSuperview()
+            make.top.bottom.equalToSuperview().inset(Spacing.xsmall.rawValue)
             make.width.equalTo(self.contentView.snp.height)
         }
         collectionNameLabel.snp.makeConstraints { make in
@@ -34,14 +44,17 @@ class SongSearchCell: UICollectionViewCell {
             make.leading.equalTo(artistNameLabel.snp.trailing).offset(Spacing.medium.rawValue)
             make.height.equalToSuperview()
         }
+        separator.frame = CGRect(x: 0, y: containerView.bounds.height, width: containerView.bounds.width, height: CGFloat(Spacing.point.rawValue))
     }
 
     func setupViews() {
         backgroundColor = .white
-        addSubview(imageView)
-        addSubview(collectionNameLabel)
-        addSubview(artistNameLabel)
-        addSubview(trackNameLabel)
+        addSubview(containerView)
+        containerView.addSubview(imageView)
+        containerView.addSubview(collectionNameLabel)
+        containerView.addSubview(artistNameLabel)
+        containerView.addSubview(trackNameLabel)
+        containerView.layer.addSublayer(separator)
     }
 }
 

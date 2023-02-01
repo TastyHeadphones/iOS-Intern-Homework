@@ -20,7 +20,7 @@ class SongSearchViewController: BaseViewController {
 
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Hello World".localized()
+        label.text = "Search".localized()
         return label
     }()
 
@@ -56,8 +56,9 @@ class SongSearchViewController: BaseViewController {
             make.height.equalTo(20)
         }
         searchSongsListView.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel)
+            make.top.equalTo(titleLabel.snp.bottom)
             make.leading.trailing.bottom.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
     }
 

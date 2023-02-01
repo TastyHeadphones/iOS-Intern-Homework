@@ -6,8 +6,10 @@
 //
 
 enum Spacing: Int {
-    case line = 1
+    case point = 1
     case small = 5
+    case xsmall = 8
     case medium = 10
+    case xmedium = 15
     case large = 20
 }
