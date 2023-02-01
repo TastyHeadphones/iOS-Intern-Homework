@@ -8,10 +8,10 @@
 import Foundation
 import Combine
 
-class BaseDataService<T: Decodable,U> {
+class BaseDataService<T: Decodable, U> {
     private let repository: BaseRepository<T>
     lazy var resource = repository.resource
-        .map{ rawData in return self.transform(rawData: rawData) }
+        .map { rawData in return self.transform(rawData: rawData) }
 
     init(repository: BaseRepository<T>) {
         self.repository = repository

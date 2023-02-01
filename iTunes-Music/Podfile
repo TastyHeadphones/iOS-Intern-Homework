@@ -6,16 +6,14 @@ target 'iTunes-Music' do
   pod 'SnapKit'
   pod 'Localize-Swift'
   pod 'Toast-Swift'
+  pod 'SDWebImage', '~> 5.0'
 
   # Pods for iTunes-Music
 
   target 'iTunes-MusicTests' do
-    inherit! :search_paths
-    # Pods for testing
   end
 
   target 'iTunes-MusicUITests' do
-    # Pods for testing
   end
 
 end

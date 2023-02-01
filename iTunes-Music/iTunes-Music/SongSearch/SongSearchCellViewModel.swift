@@ -14,7 +14,7 @@ class SongSearchCellViewModel: ListDiffable {
     let artistName: String
     let trackName: String
 
-    init(searchpResult : ItunesSearchpResult) {
+    init(searchpResult: ItunesSearchpResult) {
         self.imageURL = URL(string: searchpResult.artworkUrl100)!
         self.collectionName = searchpResult.collectionName
         self.artistName = searchpResult.artistName

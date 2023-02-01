@@ -11,7 +11,7 @@ import Combine
 class BaseRepository<T: Decodable> {
     let url: URL
     lazy var resource = URLSession.shared.dataTaskPublisher(for: url)
-        .map{ $0.data }
+        .map { $0.data }
         .decode(type: T.self, decoder: JSONDecoder())
 
     init(url: URL) {

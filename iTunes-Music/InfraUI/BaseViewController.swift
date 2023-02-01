@@ -12,7 +12,7 @@ class BaseViewController: UIViewController {
     // MARK: - Properties
 
     // MARK: - Initializers
-        
+
     public init() {
         super.init(nibName: nil, bundle: nil)
     }
