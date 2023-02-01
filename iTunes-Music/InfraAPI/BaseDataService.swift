@@ -9,23 +9,15 @@ import Foundation
 import Combine
 
 class BaseDataService<T: Decodable,U> {
-    private let rawResource: Publishers.Decode<Publishers.Map<URLSession.DataTaskPublisher, JSONDecoder.Input>, T, JSONDecoder>
-    private var rawData:T?
-    private var cancellableSet: Set<AnyCancellable> = []
-    lazy var data = transform(rawData: rawData)
-    init(rawResource: Publishers.Decode<Publishers.Map<URLSession.DataTaskPublisher, JSONDecoder.Input>, T, JSONDecoder>) {
-        self.rawResource = rawResource
+    private let repository: BaseRepository<T>
+    lazy var resource = repository.resource
+        .map{ rawData in return self.transform(rawData: rawData) }
+
+    init(repository: BaseRepository<T>) {
+        self.repository = repository
     }
 
     open func transform(rawData: T?) -> U? {
         fatalError("BaseDataService transform func must be override")
-    }
-
-    open func fetch() {
-        rawResource.sink(receiveCompletion: { completion in
-            print(completion)
-        }, receiveValue: { data in
-            self.rawData = data
-        }).store(in: &self.cancellableSet)
     }
 }

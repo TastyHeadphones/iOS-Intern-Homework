@@ -8,6 +8,10 @@
 import Foundation
 
 class SongSearchDataService: BaseDataService<ItunesSearchpResults, [SongSearchCellViewModel]> {
+    init(term: String, offset: Int) {
+        let repository = SongSearchRepository(term: term, offset: offset)
+        super.init(repository: repository)
+    }
     override func transform(rawData: ItunesSearchpResults?) -> [SongSearchCellViewModel]? {
         guard let rawData = rawData else {
             return nil
