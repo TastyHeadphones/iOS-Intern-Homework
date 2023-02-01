@@ -18,10 +18,9 @@
 		37006B942987893600A1EC59 /* SongSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37006B932987893600A1EC59 /* SongSearchRepository.swift */; };
 		37006B962987897400A1EC59 /* SongSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37006B952987897400A1EC59 /* SongSearchCell.swift */; };
 		37006B982987899700A1EC59 /* SongSearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37006B972987899700A1EC59 /* SongSearchCellViewModel.swift */; };
+		371C62542989FB96007BF028 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C62532989FB96007BF028 /* Spacing.swift */; };
 		37A9C470298404B800F3A8DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C46F298404B800F3A8DF /* AppDelegate.swift */; };
 		37A9C472298404B800F3A8DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C471298404B800F3A8DF /* SceneDelegate.swift */; };
-		37A9C474298404B800F3A8DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C473298404B800F3A8DF /* ViewController.swift */; };
-		37A9C477298404B800F3A8DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9C475298404B800F3A8DF /* Main.storyboard */; };
 		37A9C47A298404B800F3A8DF /* iTunes_Music.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C478298404B800F3A8DF /* iTunes_Music.xcdatamodeld */; };
 		37A9C47C298404BA00F3A8DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A9C47B298404BA00F3A8DF /* Assets.xcassets */; };
 		37A9C47F298404BA00F3A8DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9C47D298404BA00F3A8DF /* LaunchScreen.storyboard */; };
@@ -63,11 +62,10 @@
 		37006B932987893600A1EC59 /* SongSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchRepository.swift; sourceTree = "<group>"; };
 		37006B952987897400A1EC59 /* SongSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchCell.swift; sourceTree = "<group>"; };
 		37006B972987899700A1EC59 /* SongSearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchCellViewModel.swift; sourceTree = "<group>"; };
+		371C62532989FB96007BF028 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		37A9C46C298404B800F3A8DF /* iTunes-Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes-Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A9C46F298404B800F3A8DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A9C471298404B800F3A8DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		37A9C473298404B800F3A8DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		37A9C476298404B800F3A8DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37A9C479298404B800F3A8DF /* iTunes_Music.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iTunes_Music.xcdatamodel; sourceTree = "<group>"; };
 		37A9C47B298404BA00F3A8DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37A9C47E298404BA00F3A8DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				37006B7B29853C1700A1EC59 /* BaseViewController.swift */,
+				371C62532989FB96007BF028 /* Spacing.swift */,
 			);
 			path = InfraUI;
 			sourceTree = "<group>";
@@ -192,8 +191,6 @@
 				37006B8E2987883600A1EC59 /* SongSearch */,
 				37A9C46F298404B800F3A8DF /* AppDelegate.swift */,
 				37A9C471298404B800F3A8DF /* SceneDelegate.swift */,
-				37A9C473298404B800F3A8DF /* ViewController.swift */,
-				37A9C475298404B800F3A8DF /* Main.storyboard */,
 				37A9C47B298404BA00F3A8DF /* Assets.xcassets */,
 				37A9C47D298404BA00F3A8DF /* LaunchScreen.storyboard */,
 				37A9C480298404BA00F3A8DF /* Info.plist */,
@@ -343,7 +340,6 @@
 			files = (
 				37A9C47F298404BA00F3A8DF /* LaunchScreen.storyboard in Resources */,
 				37A9C47C298404BA00F3A8DF /* Assets.xcassets in Resources */,
-				37A9C477298404B800F3A8DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,10 +469,10 @@
 			files = (
 				37006B962987897400A1EC59 /* SongSearchCell.swift in Sources */,
 				37006B922987890A00A1EC59 /* SongSearchDataService.swift in Sources */,
+				371C62542989FB96007BF028 /* Spacing.swift in Sources */,
 				37006B8C298768C000A1EC59 /* ItunesSearchResult.swift in Sources */,
 				37006B7C29853C1700A1EC59 /* BaseViewController.swift in Sources */,
 				37006B89298767EE00A1EC59 /* BaseRepository.swift in Sources */,
-				37A9C474298404B800F3A8DF /* ViewController.swift in Sources */,
 				37A9C47A298404B800F3A8DF /* iTunes_Music.xcdatamodeld in Sources */,
 				37006B982987899700A1EC59 /* SongSearchCellViewModel.swift in Sources */,
 				37006B942987893600A1EC59 /* SongSearchRepository.swift in Sources */,
@@ -521,14 +517,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		37A9C475298404B800F3A8DF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				37A9C476298404B800F3A8DF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		37A9C47D298404BA00F3A8DF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -667,7 +655,6 @@
 				INFOPLIST_FILE = "iTunes-Music/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -696,7 +683,6 @@
 				INFOPLIST_FILE = "iTunes-Music/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
