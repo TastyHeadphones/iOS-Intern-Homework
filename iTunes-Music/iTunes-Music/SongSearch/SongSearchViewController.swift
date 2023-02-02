@@ -27,6 +27,7 @@ class SongSearchViewController: BaseViewController {
     }()
 
     let searchBar = UISearchBar()
+    var searchBarString = ""
 
     let searchSongsListView: ListCollectionView = ListCollectionView()
 
@@ -71,6 +72,7 @@ class SongSearchViewController: BaseViewController {
         view.addSubview(searchBar)
         view.addSubview(titleLabel)
         view.addSubview(searchSongsListView)
+        searchBar.delegate = self
         adapter.collectionView = searchSongsListView
         searchSongsListView.showsVerticalScrollIndicator = false
         adapter.dataSource = self
@@ -91,23 +93,6 @@ class SongSearchViewController: BaseViewController {
             make.leading.trailing.bottom.equalToSuperview()
             make.bottom.equalToSuperview()
         }
-    }
-
-    override func setupSubscribes() {
-        dataService.resource.sink { com in
-            print(com)
-        } receiveValue: { [weak self] data in
-            guard let self = self else {
-                return
-            }
-            guard let data = data else {
-                return
-            }
-            self.searchSongs.append(contentsOf: data)
-            DispatchQueue.main.async {
-                self.adapter.performUpdates(animated: true, completion: nil)
-            }
-        }.store(in: &cancellableSet)
     }
 }
 
@@ -144,8 +129,22 @@ extension SongSearchViewController: UIScrollViewDelegate {
             isLoading = true
             adapter.performUpdates(animated: true, completion: nil)
             offset += Self.offsetStep
-            self.dataService = SongSearchDataService(term: "", offset: offset)
+            self.dataService = SongSearchDataService(term: searchBarString, offset: offset)
         }
+    }
+}
+
+extension SongSearchViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchBarString = searchText
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        offset = 0
+        searchSongs.removeAll()
+        DispatchQueue.main.async {
+            self.adapter.performUpdates(animated: true, completion: nil)
+        }
+        dataService = SongSearchDataService(term: searchBarString, offset: offset)
     }
 }
 
