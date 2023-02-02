@@ -146,7 +146,7 @@ class SearchSongsSectionController: ListSectionController {
     private var object: SongSearchCellViewModel?
 
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: collectionContext!.containerSize.width, height: 55)
+        return CGSize(width: collectionContext!.containerSize.width, height: Spacing.cellHeight)
     }
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {
