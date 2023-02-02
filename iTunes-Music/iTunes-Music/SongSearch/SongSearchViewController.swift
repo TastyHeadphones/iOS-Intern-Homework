@@ -15,6 +15,7 @@ class SongSearchViewController: BaseViewController {
 
     static let offsetStep = SongSearchRepository.limit
     var offset: Int = 0
+
     var searchSongs: [SongSearchCellViewModel] = []
 
     private var cancellableSet: Set<AnyCancellable> = []
@@ -25,6 +26,8 @@ class SongSearchViewController: BaseViewController {
         return label
     }()
 
+    let searchBar = UISearchBar()
+
     let searchSongsListView: ListCollectionView = ListCollectionView()
 
     lazy var adapter: ListAdapter = {
@@ -33,6 +36,7 @@ class SongSearchViewController: BaseViewController {
 
     var dataService: SongSearchDataService {
         didSet {
+            cancellableSet.removeAll()
             isLoading = true
             dataService.resource.sink { com in
                 print("\(com) offset= \(self.offset)")
@@ -64,6 +68,7 @@ class SongSearchViewController: BaseViewController {
 
     override func setupViews() {
         view.backgroundColor = .white
+        view.addSubview(searchBar)
         view.addSubview(titleLabel)
         view.addSubview(searchSongsListView)
         adapter.collectionView = searchSongsListView
@@ -76,10 +81,13 @@ class SongSearchViewController: BaseViewController {
         titleLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(Spacing.large)
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.height.equalTo(20)
+        }
+        searchBar.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(Spacing.small)
+            make.leading.trailing.equalToSuperview()
         }
         searchSongsListView.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom)
+            make.top.equalTo(searchBar.snp.bottom)
             make.leading.trailing.bottom.equalToSuperview()
             make.bottom.equalToSuperview()
         }
