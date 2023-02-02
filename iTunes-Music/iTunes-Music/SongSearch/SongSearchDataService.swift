@@ -18,6 +18,9 @@ class SongSearchDataService: BaseDataService<ItunesSearchpResults, [SongSearchCe
         guard let rawData = rawData else {
             return nil
         }
+        guard !rawData.results.isEmpty else {
+            return nil
+        }
         return rawData.results.map { result in
             return SongSearchCellViewModel(searchpResult: result)
         }
