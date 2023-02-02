@@ -58,7 +58,7 @@ class SongSearchViewController: BaseViewController {
     }
 
     override init() {
-        self.dataService = SongSearchDataService(term: "五月天", offset: offset)
+        self.dataService = SongSearchDataService(term: "", offset: offset)
         super.init()
     }
 
@@ -130,7 +130,7 @@ extension SongSearchViewController: ListAdapterDataSource {
     }
 
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
-        return nil
+        return emptyView()
     }
 }
 
@@ -144,7 +144,7 @@ extension SongSearchViewController: UIScrollViewDelegate {
             isLoading = true
             adapter.performUpdates(animated: true, completion: nil)
             offset += Self.offsetStep
-            self.dataService = SongSearchDataService(term: "五月天", offset: offset)
+            self.dataService = SongSearchDataService(term: "", offset: offset)
         }
     }
 }
