@@ -22,7 +22,7 @@ class SongSearchViewController: BaseViewController {
 
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Search".localized()
+        label.text = "HomeTitle".localized()
         return label
     }()
 
@@ -79,7 +79,7 @@ class SongSearchViewController: BaseViewController {
 
     override func setupConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().inset(Spacing.large)
+            make.centerX.equalToSuperview()
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
         }
         searchBar.snp.makeConstraints { make in
