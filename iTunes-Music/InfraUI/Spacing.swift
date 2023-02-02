@@ -5,11 +5,11 @@
 //  Created by Magic Keegan on 2/1/23.
 //
 
-enum Spacing: Int {
-    case point = 1
-    case small = 5
-    case xsmall = 8
-    case medium = 10
-    case xmedium = 15
-    case large = 20
+struct Spacing {
+    static let point = 1
+    static let small = 5
+    static let xsmall = 8
+    static let medium = 10
+    static let xmedium = 15
+    static let large = 20
 }

@@ -24,27 +24,27 @@ class SongSearchCell: UICollectionViewCell {
 
     func setupConstraints() {
         containerView.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(Spacing.xmedium.rawValue)
-            make.top.bottom.equalToSuperview().inset(Spacing.xsmall.rawValue)
+            make.leading.trailing.equalToSuperview().inset(Spacing.xmedium)
+            make.top.bottom.equalToSuperview().inset(Spacing.xsmall)
         }
         imageView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().inset(Spacing.medium.rawValue)
-            make.top.bottom.equalToSuperview().inset(Spacing.xsmall.rawValue)
+            make.leading.equalToSuperview().inset(Spacing.medium)
+            make.top.bottom.equalToSuperview().inset(Spacing.xsmall)
             make.width.equalTo(self.contentView.snp.height)
         }
         collectionNameLabel.snp.makeConstraints { make in
-            make.leading.equalTo(imageView.snp.trailing).offset(Spacing.medium.rawValue)
+            make.leading.equalTo(imageView.snp.trailing).offset(Spacing.medium)
             make.height.equalToSuperview()
         }
         artistNameLabel.snp.makeConstraints { make in
-            make.leading.equalTo(collectionNameLabel.snp.trailing).offset(Spacing.medium.rawValue)
+            make.leading.equalTo(collectionNameLabel.snp.trailing).offset(Spacing.medium)
             make.height.equalToSuperview()
         }
         trackNameLabel.snp.makeConstraints { make in
-            make.leading.equalTo(artistNameLabel.snp.trailing).offset(Spacing.medium.rawValue)
+            make.leading.equalTo(artistNameLabel.snp.trailing).offset(Spacing.medium)
             make.height.equalToSuperview()
         }
-        separator.frame = CGRect(x: 0, y: containerView.bounds.height, width: containerView.bounds.width, height: CGFloat(Spacing.point.rawValue))
+        separator.frame = CGRect(x: 0, y: containerView.bounds.height, width: containerView.bounds.width, height: CGFloat(Spacing.point))
     }
 
     func setupViews() {
