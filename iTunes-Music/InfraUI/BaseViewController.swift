@@ -6,10 +6,27 @@
 //
 
 import UIKit
+import IGListKit
 
 class BaseViewController: UIViewController {
+    
+    // MARK: - Constants
+
+    static let spinToken = "spinner"
 
     // MARK: - Properties
+
+    var isLoading = false
+
+    // MARK: - Initializers
+
+    public init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - View Lifecycle
 
@@ -40,5 +57,24 @@ class BaseViewController: UIViewController {
     /// Abstract method. Subclasses should override this method to setup their view.
     open func fetchData() {
 
+    }
+
+    open func spinnerSectionController() -> ListSingleSectionController {
+        let configureBlock = { (_: Any, cell: UICollectionViewCell) in
+            guard let cell = cell as? SpinnerCell else {
+                return
+            }
+            cell.activityIndicator.startAnimating()
+        }
+
+        let sizeBlock = { (_: Any, context: ListCollectionContext?) -> CGSize in
+            guard let context = context else { return .zero }
+            return CGSize(width: context.containerSize.width, height: 100)
+        }
+
+        return ListSingleSectionController(
+            cellClass: SpinnerCell.self,
+            configureBlock: configureBlock,
+            sizeBlock: sizeBlock)
     }
 }

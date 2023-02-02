@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02D12B16370F099EF10C7FD1 /* Pods_iTunes_Music_iTunes_MusicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A91C1AB12035F1D9E4EC7D7 /* Pods_iTunes_Music_iTunes_MusicTests.framework */; };
 		3520E960F05D680AE97F7348 /* Pods_iTunes_Music_iTunes_MusicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF753E15501F2CC0C30D893 /* Pods_iTunes_Music_iTunes_MusicUITests.framework */; };
 		37006B7C29853C1700A1EC59 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37006B7B29853C1700A1EC59 /* BaseViewController.swift */; };
+		37006B88298767EE00A1EC59 /* BaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37006B86298767EE00A1EC59 /* BaseDataService.swift */; };
+		37006B89298767EE00A1EC59 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37006B87298767EE00A1EC59 /* BaseRepository.swift */; };
+		37006B8C298768C000A1EC59 /* ItunesSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37006B8A298768C000A1EC59 /* ItunesSearchResult.swift */; };
+		37006B8D298768C000A1EC59 /* ItunesLookupResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37006B8B298768C000A1EC59 /* ItunesLookupResult.swift */; };
+		37006B90298788F300A1EC59 /* SongSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37006B8F298788F300A1EC59 /* SongSearchViewController.swift */; };
+		37006B922987890A00A1EC59 /* SongSearchDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37006B912987890A00A1EC59 /* SongSearchDataService.swift */; };
+		37006B942987893600A1EC59 /* SongSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37006B932987893600A1EC59 /* SongSearchRepository.swift */; };
+		37006B962987897400A1EC59 /* SongSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37006B952987897400A1EC59 /* SongSearchCell.swift */; };
+		37006B982987899700A1EC59 /* SongSearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37006B972987899700A1EC59 /* SongSearchCellViewModel.swift */; };
+		3705352F298A413E00131066 /* SpinnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3705352E298A413E00131066 /* SpinnerCell.swift */; };
+		37053535298A55A500131066 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37053534298A55A500131066 /* UIColor+Extension.swift */; };
+		371C62542989FB96007BF028 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C62532989FB96007BF028 /* Spacing.swift */; };
+		371C6257298A0E46007BF028 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 371C6259298A0E46007BF028 /* Localizable.strings */; };
 		37A9C470298404B800F3A8DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C46F298404B800F3A8DF /* AppDelegate.swift */; };
 		37A9C472298404B800F3A8DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C471298404B800F3A8DF /* SceneDelegate.swift */; };
-		37A9C474298404B800F3A8DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C473298404B800F3A8DF /* ViewController.swift */; };
-		37A9C477298404B800F3A8DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9C475298404B800F3A8DF /* Main.storyboard */; };
 		37A9C47A298404B800F3A8DF /* iTunes_Music.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C478298404B800F3A8DF /* iTunes_Music.xcdatamodeld */; };
 		37A9C47C298404BA00F3A8DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A9C47B298404BA00F3A8DF /* Assets.xcassets */; };
 		37A9C47F298404BA00F3A8DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9C47D298404BA00F3A8DF /* LaunchScreen.storyboard */; };
-		37A9C48A298404BA00F3A8DF /* iTunes_MusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C489298404BA00F3A8DF /* iTunes_MusicTests.swift */; };
 		37A9C494298404BA00F3A8DF /* iTunes_MusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C493298404BA00F3A8DF /* iTunes_MusicUITests.swift */; };
 		37A9C496298404BA00F3A8DF /* iTunes_MusicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C495298404BA00F3A8DF /* iTunes_MusicUITestsLaunchTests.swift */; };
-		B26770870310A2C2ABD3D831 /* Pods_iTunes_MusicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8C693B30D40C33D696B4D2 /* Pods_iTunes_MusicTests.framework */; };
 		CD0101BFC1EA69D7A0C983A2 /* Pods_iTunes_Music.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC1787D5B92403712B96FDA /* Pods_iTunes_Music.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,22 +55,38 @@
 		1BC1787D5B92403712B96FDA /* Pods_iTunes_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunes_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		247EDED0CA8A4083860910BE /* Pods-iTunes-Music.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunes-Music.release.xcconfig"; path = "Target Support Files/Pods-iTunes-Music/Pods-iTunes-Music.release.xcconfig"; sourceTree = "<group>"; };
 		37006B7B29853C1700A1EC59 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		37006B86298767EE00A1EC59 /* BaseDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDataService.swift; sourceTree = "<group>"; };
+		37006B87298767EE00A1EC59 /* BaseRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		37006B8A298768C000A1EC59 /* ItunesSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesSearchResult.swift; sourceTree = "<group>"; };
+		37006B8B298768C000A1EC59 /* ItunesLookupResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesLookupResult.swift; sourceTree = "<group>"; };
+		37006B8F298788F300A1EC59 /* SongSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchViewController.swift; sourceTree = "<group>"; };
+		37006B912987890A00A1EC59 /* SongSearchDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchDataService.swift; sourceTree = "<group>"; };
+		37006B932987893600A1EC59 /* SongSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchRepository.swift; sourceTree = "<group>"; };
+		37006B952987897400A1EC59 /* SongSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchCell.swift; sourceTree = "<group>"; };
+		37006B972987899700A1EC59 /* SongSearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchCellViewModel.swift; sourceTree = "<group>"; };
+		3705352E298A413E00131066 /* SpinnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerCell.swift; sourceTree = "<group>"; };
+		37053534298A55A500131066 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		371C62532989FB96007BF028 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		371C6258298A0E46007BF028 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		371C625B298A0F4F007BF028 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		371C625C298A0F4F007BF028 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		371C625D298A0F60007BF028 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		371C625E298A0F60007BF028 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		37A9C46C298404B800F3A8DF /* iTunes-Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes-Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A9C46F298404B800F3A8DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A9C471298404B800F3A8DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		37A9C473298404B800F3A8DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		37A9C476298404B800F3A8DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37A9C479298404B800F3A8DF /* iTunes_Music.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iTunes_Music.xcdatamodel; sourceTree = "<group>"; };
 		37A9C47B298404BA00F3A8DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37A9C47E298404BA00F3A8DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37A9C480298404BA00F3A8DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A9C485298404BA00F3A8DF /* iTunes-MusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iTunes-MusicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		37A9C489298404BA00F3A8DF /* iTunes_MusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunes_MusicTests.swift; sourceTree = "<group>"; };
 		37A9C48F298404BA00F3A8DF /* iTunes-MusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iTunes-MusicUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A9C493298404BA00F3A8DF /* iTunes_MusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunes_MusicUITests.swift; sourceTree = "<group>"; };
 		37A9C495298404BA00F3A8DF /* iTunes_MusicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunes_MusicUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4D02CEEF7940306C7365A44A /* Pods-iTunes-Music-iTunes-MusicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunes-Music-iTunes-MusicTests.release.xcconfig"; path = "Target Support Files/Pods-iTunes-Music-iTunes-MusicTests/Pods-iTunes-Music-iTunes-MusicTests.release.xcconfig"; sourceTree = "<group>"; };
 		5531283DFB5CB850BDB9FAB8 /* Pods-iTunes-Music-iTunes-MusicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunes-Music-iTunes-MusicUITests.debug.xcconfig"; path = "Target Support Files/Pods-iTunes-Music-iTunes-MusicUITests/Pods-iTunes-Music-iTunes-MusicUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		BE8C693B30D40C33D696B4D2 /* Pods_iTunes_MusicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunes_MusicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A91C1AB12035F1D9E4EC7D7 /* Pods_iTunes_Music_iTunes_MusicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunes_Music_iTunes_MusicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		989B4B6F911260B29B1716A5 /* Pods-iTunes-Music-iTunes-MusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunes-Music-iTunes-MusicTests.debug.xcconfig"; path = "Target Support Files/Pods-iTunes-Music-iTunes-MusicTests/Pods-iTunes-Music-iTunes-MusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7BC484D7777B3DAB573AC12 /* Pods-iTunes-Music-iTunes-MusicUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunes-Music-iTunes-MusicUITests.release.xcconfig"; path = "Target Support Files/Pods-iTunes-Music-iTunes-MusicUITests/Pods-iTunes-Music-iTunes-MusicUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DAF753E15501F2CC0C30D893 /* Pods_iTunes_Music_iTunes_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunes_Music_iTunes_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8263C4596001EE49C17033D /* Pods-iTunes-Music.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunes-Music.debug.xcconfig"; path = "Target Support Files/Pods-iTunes-Music/Pods-iTunes-Music.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B26770870310A2C2ABD3D831 /* Pods_iTunes_MusicTests.framework in Frameworks */,
+				02D12B16370F099EF10C7FD1 /* Pods_iTunes_Music_iTunes_MusicTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +126,7 @@
 			children = (
 				1BC1787D5B92403712B96FDA /* Pods_iTunes_Music.framework */,
 				DAF753E15501F2CC0C30D893 /* Pods_iTunes_Music_iTunes_MusicUITests.framework */,
-				BE8C693B30D40C33D696B4D2 /* Pods_iTunes_MusicTests.framework */,
+				7A91C1AB12035F1D9E4EC7D7 /* Pods_iTunes_Music_iTunes_MusicTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,6 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				37006B7B29853C1700A1EC59 /* BaseViewController.swift */,
+				371C62532989FB96007BF028 /* Spacing.swift */,
+				3705352E298A413E00131066 /* SpinnerCell.swift */,
+				37053534298A55A500131066 /* UIColor+Extension.swift */,
 			);
 			path = InfraUI;
 			sourceTree = "<group>";
@@ -116,6 +145,8 @@
 		37006B7A29853BFF00A1EC59 /* InfraAPI */ = {
 			isa = PBXGroup;
 			children = (
+				37006B86298767EE00A1EC59 /* BaseDataService.swift */,
+				37006B87298767EE00A1EC59 /* BaseRepository.swift */,
 			);
 			path = InfraAPI;
 			sourceTree = "<group>";
@@ -123,13 +154,36 @@
 		37006B7D2985F6FB00A1EC59 /* APIModel */ = {
 			isa = PBXGroup;
 			children = (
+				37006B8B298768C000A1EC59 /* ItunesLookupResult.swift */,
+				37006B8A298768C000A1EC59 /* ItunesSearchResult.swift */,
 			);
 			path = APIModel;
+			sourceTree = "<group>";
+		};
+		37006B8E2987883600A1EC59 /* SongSearch */ = {
+			isa = PBXGroup;
+			children = (
+				37006B8F298788F300A1EC59 /* SongSearchViewController.swift */,
+				37006B912987890A00A1EC59 /* SongSearchDataService.swift */,
+				37006B932987893600A1EC59 /* SongSearchRepository.swift */,
+				37006B952987897400A1EC59 /* SongSearchCell.swift */,
+				37006B972987899700A1EC59 /* SongSearchCellViewModel.swift */,
+			);
+			path = SongSearch;
+			sourceTree = "<group>";
+		};
+		371C625A298A0E5D007BF028 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				371C6259298A0E46007BF028 /* Localizable.strings */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 		37A9C463298404B800F3A8DF = {
 			isa = PBXGroup;
 			children = (
+				371C625A298A0E5D007BF028 /* Localizable */,
 				37006B7D2985F6FB00A1EC59 /* APIModel */,
 				37006B7A29853BFF00A1EC59 /* InfraAPI */,
 				37006B7929853BF600A1EC59 /* InfraUI */,
@@ -155,10 +209,9 @@
 		37A9C46E298404B800F3A8DF /* iTunes-Music */ = {
 			isa = PBXGroup;
 			children = (
+				37006B8E2987883600A1EC59 /* SongSearch */,
 				37A9C46F298404B800F3A8DF /* AppDelegate.swift */,
 				37A9C471298404B800F3A8DF /* SceneDelegate.swift */,
-				37A9C473298404B800F3A8DF /* ViewController.swift */,
-				37A9C475298404B800F3A8DF /* Main.storyboard */,
 				37A9C47B298404BA00F3A8DF /* Assets.xcassets */,
 				37A9C47D298404BA00F3A8DF /* LaunchScreen.storyboard */,
 				37A9C480298404BA00F3A8DF /* Info.plist */,
@@ -170,7 +223,6 @@
 		37A9C488298404BA00F3A8DF /* iTunes-MusicTests */ = {
 			isa = PBXGroup;
 			children = (
-				37A9C489298404BA00F3A8DF /* iTunes_MusicTests.swift */,
 			);
 			path = "iTunes-MusicTests";
 			sourceTree = "<group>";
@@ -193,6 +245,8 @@
 				C7BC484D7777B3DAB573AC12 /* Pods-iTunes-Music-iTunes-MusicUITests.release.xcconfig */,
 				06B09144B59902FF5D877C0A /* Pods-iTunes-MusicTests.debug.xcconfig */,
 				FC0025950C57EE7EB61C6072 /* Pods-iTunes-MusicTests.release.xcconfig */,
+				989B4B6F911260B29B1716A5 /* Pods-iTunes-Music-iTunes-MusicTests.debug.xcconfig */,
+				4D02CEEF7940306C7365A44A /* Pods-iTunes-Music-iTunes-MusicTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -227,6 +281,7 @@
 				37A9C481298404BA00F3A8DF /* Sources */,
 				37A9C482298404BA00F3A8DF /* Frameworks */,
 				37A9C483298404BA00F3A8DF /* Resources */,
+				274DF03C7B06EDBA895075A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,6 +343,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 37A9C463298404B800F3A8DF;
 			productRefGroup = 37A9C46D298404B800F3A8DF /* Products */;
@@ -307,8 +364,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				37A9C47F298404BA00F3A8DF /* LaunchScreen.storyboard in Resources */,
+				371C6257298A0E46007BF028 /* Localizable.strings in Resources */,
 				37A9C47C298404BA00F3A8DF /* Assets.xcassets in Resources */,
-				37A9C477298404B800F3A8DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +401,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-iTunes-MusicTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-iTunes-Music-iTunes-MusicTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -371,6 +428,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		274DF03C7B06EDBA895075A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iTunes-Music-iTunes-MusicTests/Pods-iTunes-Music-iTunes-MusicTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iTunes-Music-iTunes-MusicTests/Pods-iTunes-Music-iTunes-MusicTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iTunes-Music-iTunes-MusicTests/Pods-iTunes-Music-iTunes-MusicTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		88F52A15D0B38CAF0CD31B6F /* [CP] Check Pods Manifest.lock */ = {
@@ -436,11 +510,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37006B962987897400A1EC59 /* SongSearchCell.swift in Sources */,
+				37006B922987890A00A1EC59 /* SongSearchDataService.swift in Sources */,
+				371C62542989FB96007BF028 /* Spacing.swift in Sources */,
+				3705352F298A413E00131066 /* SpinnerCell.swift in Sources */,
+				37006B8C298768C000A1EC59 /* ItunesSearchResult.swift in Sources */,
 				37006B7C29853C1700A1EC59 /* BaseViewController.swift in Sources */,
-				37A9C474298404B800F3A8DF /* ViewController.swift in Sources */,
+				37006B89298767EE00A1EC59 /* BaseRepository.swift in Sources */,
+				37053535298A55A500131066 /* UIColor+Extension.swift in Sources */,
 				37A9C47A298404B800F3A8DF /* iTunes_Music.xcdatamodeld in Sources */,
+				37006B982987899700A1EC59 /* SongSearchCellViewModel.swift in Sources */,
+				37006B942987893600A1EC59 /* SongSearchRepository.swift in Sources */,
 				37A9C470298404B800F3A8DF /* AppDelegate.swift in Sources */,
+				37006B8D298768C000A1EC59 /* ItunesLookupResult.swift in Sources */,
+				37006B88298767EE00A1EC59 /* BaseDataService.swift in Sources */,
 				37A9C472298404B800F3A8DF /* SceneDelegate.swift in Sources */,
+				37006B90298788F300A1EC59 /* SongSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +533,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A9C48A298404BA00F3A8DF /* iTunes_MusicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,18 +561,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		37A9C475298404B800F3A8DF /* Main.storyboard */ = {
+		371C6259298A0E46007BF028 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				37A9C476298404B800F3A8DF /* Base */,
+				371C6258298A0E46007BF028 /* en */,
+				371C625C298A0F4F007BF028 /* zh-Hans */,
+				371C625E298A0F60007BF028 /* zh-Hant */,
 			);
-			name = Main.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		37A9C47D298404BA00F3A8DF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				37A9C47E298404BA00F3A8DF /* Base */,
+				371C625B298A0F4F007BF028 /* zh-Hans */,
+				371C625D298A0F60007BF028 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -500,6 +588,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -546,7 +635,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -560,6 +649,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -600,7 +690,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -623,7 +713,6 @@
 				INFOPLIST_FILE = "iTunes-Music/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -652,7 +741,6 @@
 				INFOPLIST_FILE = "iTunes-Music/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -670,7 +758,7 @@
 		};
 		37A9C49D298404BA00F3A8DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06B09144B59902FF5D877C0A /* Pods-iTunes-MusicTests.debug.xcconfig */;
+			baseConfigurationReference = 989B4B6F911260B29B1716A5 /* Pods-iTunes-Music-iTunes-MusicTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -691,7 +779,7 @@
 		};
 		37A9C49E298404BA00F3A8DF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC0025950C57EE7EB61C6072 /* Pods-iTunes-MusicTests.release.xcconfig */;
+			baseConfigurationReference = 4D02CEEF7940306C7365A44A /* Pods-iTunes-Music-iTunes-MusicTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
