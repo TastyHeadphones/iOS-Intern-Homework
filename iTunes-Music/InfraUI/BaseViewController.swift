@@ -8,6 +8,7 @@
 import UIKit
 import IGListKit
 import SnapKit
+import WebKit
 
 class BaseViewController: UIViewController {
     
@@ -17,7 +18,7 @@ class BaseViewController: UIViewController {
 
     // MARK: - Properties
 
-    var isLoading = false
+    open var isLoading = false
 
     // MARK: - Initializers
 
@@ -88,5 +89,19 @@ class BaseViewController: UIViewController {
             make.center.equalToSuperview()
         }
         return view
+    }
+
+    open func openUrl(url: URL?) {
+        guard let url = url else {
+            return
+        }
+        let webView = WKWebView()
+        let vc = UIViewController()
+        vc.view.addSubview(webView)
+        webView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        webView.load(URLRequest(url: url))
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
