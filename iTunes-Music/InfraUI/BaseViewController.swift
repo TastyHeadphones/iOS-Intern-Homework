@@ -7,6 +7,7 @@
 
 import UIKit
 import IGListKit
+import SnapKit
 
 class BaseViewController: UIViewController {
     
@@ -76,5 +77,16 @@ class BaseViewController: UIViewController {
             cellClass: SpinnerCell.self,
             configureBlock: configureBlock,
             sizeBlock: sizeBlock)
+    }
+
+    open func emptyView() -> UIView {
+        let view = UIView()
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "ITunes_12.2_logo")
+        view.addSubview(imageView)
+        imageView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+        return view
     }
 }

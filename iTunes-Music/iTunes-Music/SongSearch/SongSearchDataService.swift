@@ -21,7 +21,11 @@ class SongSearchDataService: BaseDataService<ItunesSearchpResults, [SongSearchCe
         guard !rawData.results.isEmpty else {
             return nil
         }
-        return rawData.results.map { result in
+        return rawData.results.compactMap { result in
+            // trackId is optional in API side, but the cell need it to navigate to detail page
+            guard result.trackId != nil else {
+                return nil
+            }
             return SongSearchCellViewModel(searchpResult: result)
         }
     }

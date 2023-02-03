@@ -15,15 +15,19 @@ class SongSearchViewController: BaseViewController {
 
     static let offsetStep = SongSearchRepository.limit
     var offset: Int = 0
+
     var searchSongs: [SongSearchCellViewModel] = []
 
     private var cancellableSet: Set<AnyCancellable> = []
 
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Search".localized()
+        label.text = "HomeTitle".localized()
         return label
     }()
+
+    let searchBar = UISearchBar()
+    var searchBarString = ""
 
     let searchSongsListView: ListCollectionView = ListCollectionView()
 
@@ -33,6 +37,7 @@ class SongSearchViewController: BaseViewController {
 
     var dataService: SongSearchDataService {
         didSet {
+            cancellableSet.removeAll()
             isLoading = true
             dataService.resource.sink { com in
                 print("\(com) offset= \(self.offset)")
@@ -54,7 +59,7 @@ class SongSearchViewController: BaseViewController {
     }
 
     override init() {
-        self.dataService = SongSearchDataService(term: "五月天", offset: offset)
+        self.dataService = SongSearchDataService(term: "", offset: offset)
         super.init()
     }
 
@@ -64,8 +69,10 @@ class SongSearchViewController: BaseViewController {
 
     override func setupViews() {
         view.backgroundColor = .white
+        view.addSubview(searchBar)
         view.addSubview(titleLabel)
         view.addSubview(searchSongsListView)
+        searchBar.delegate = self
         adapter.collectionView = searchSongsListView
         searchSongsListView.showsVerticalScrollIndicator = false
         adapter.dataSource = self
@@ -74,32 +81,18 @@ class SongSearchViewController: BaseViewController {
 
     override func setupConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().inset(Spacing.large)
+            make.centerX.equalToSuperview()
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.height.equalTo(20)
+        }
+        searchBar.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(Spacing.small)
+            make.leading.trailing.equalToSuperview()
         }
         searchSongsListView.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom)
+            make.top.equalTo(searchBar.snp.bottom)
             make.leading.trailing.bottom.equalToSuperview()
             make.bottom.equalToSuperview()
         }
-    }
-
-    override func setupSubscribes() {
-        dataService.resource.sink { com in
-            print(com)
-        } receiveValue: { [weak self] data in
-            guard let self = self else {
-                return
-            }
-            guard let data = data else {
-                return
-            }
-            self.searchSongs.append(contentsOf: data)
-            DispatchQueue.main.async {
-                self.adapter.performUpdates(animated: true, completion: nil)
-            }
-        }.store(in: &cancellableSet)
     }
 }
 
@@ -122,7 +115,7 @@ extension SongSearchViewController: ListAdapterDataSource {
     }
 
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
-        return nil
+        return emptyView()
     }
 }
 
@@ -136,8 +129,22 @@ extension SongSearchViewController: UIScrollViewDelegate {
             isLoading = true
             adapter.performUpdates(animated: true, completion: nil)
             offset += Self.offsetStep
-            self.dataService = SongSearchDataService(term: "五月天", offset: offset)
+            self.dataService = SongSearchDataService(term: searchBarString, offset: offset)
         }
+    }
+}
+
+extension SongSearchViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchBarString = searchText
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        offset = 0
+        searchSongs.removeAll()
+        DispatchQueue.main.async {
+            self.adapter.performUpdates(animated: true, completion: nil)
+        }
+        dataService = SongSearchDataService(term: searchBarString, offset: offset)
     }
 }
 
