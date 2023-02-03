@@ -178,6 +178,13 @@
 			path = Localizable;
 			sourceTree = "<group>";
 		};
+		379BFB15298CA0FE00D5E2BE /* SongDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SongDetail;
+			sourceTree = "<group>";
+		};
 		37A9C463298404B800F3A8DF = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +214,7 @@
 		37A9C46E298404B800F3A8DF /* iTunes-Music */ = {
 			isa = PBXGroup;
 			children = (
+				379BFB15298CA0FE00D5E2BE /* SongDetail */,
 				37006B8E2987883600A1EC59 /* SongSearch */,
 				37A9C46F298404B800F3A8DF /* AppDelegate.swift */,
 				37A9C471298404B800F3A8DF /* SceneDelegate.swift */,
