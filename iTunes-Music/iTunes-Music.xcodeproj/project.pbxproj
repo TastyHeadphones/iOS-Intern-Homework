@@ -23,6 +23,7 @@
 		37053535298A55A500131066 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37053534298A55A500131066 /* UIColor+Extension.swift */; };
 		371C62542989FB96007BF028 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C62532989FB96007BF028 /* Spacing.swift */; };
 		371C6257298A0E46007BF028 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 371C6259298A0E46007BF028 /* Localizable.strings */; };
+		379BFB17298CD23300D5E2BE /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379BFB16298CD23300D5E2BE /* SongDetailViewController.swift */; };
 		37A9C470298404B800F3A8DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C46F298404B800F3A8DF /* AppDelegate.swift */; };
 		37A9C472298404B800F3A8DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C471298404B800F3A8DF /* SceneDelegate.swift */; };
 		37A9C47A298404B800F3A8DF /* iTunes_Music.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C478298404B800F3A8DF /* iTunes_Music.xcdatamodeld */; };
@@ -70,6 +71,7 @@
 		371C6258298A0E46007BF028 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		371C625C298A0F4F007BF028 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		371C625E298A0F60007BF028 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		379BFB16298CD23300D5E2BE /* SongDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
 		37A9C46C298404B800F3A8DF /* iTunes-Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes-Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A9C46F298404B800F3A8DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A9C471298404B800F3A8DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		379BFB15298CA0FE00D5E2BE /* SongDetail */ = {
 			isa = PBXGroup;
 			children = (
+				379BFB16298CD23300D5E2BE /* SongDetailViewController.swift */,
 			);
 			path = SongDetail;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				37006B88298767EE00A1EC59 /* BaseDataService.swift in Sources */,
 				37A9C472298404B800F3A8DF /* SceneDelegate.swift in Sources */,
 				37006B90298788F300A1EC59 /* SongSearchViewController.swift in Sources */,
+				379BFB17298CD23300D5E2BE /* SongDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
