@@ -24,7 +24,7 @@ class SongDetailViewModel {
         self.collectionName = cellModel.collectionName
         self.releaseDate = cellModel.releaseDate
         self.trackName = cellModel.trackName
-        self.artistViewUrl = URL(string: lookupResult.artistLinkUrl ?? "")
+        self.artistViewUrl = cellModel.artistViewUrl
         self.collectionViewUrl = cellModel.collectionViewUrl
         self.previewUrl = cellModel.previewUrl
     }

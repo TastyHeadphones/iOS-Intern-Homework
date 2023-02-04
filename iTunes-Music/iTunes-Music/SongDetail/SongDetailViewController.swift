@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 import SDWebImage
+import Toast_Swift
 
 class SongDetailViewController: BaseViewController {
 
@@ -159,18 +160,26 @@ class SongDetailViewController: BaseViewController {
         }.store(in: &cancellableSet)
     }
 
-    @objc
-    func playButtonTapped() {
-        openUrl(url: viewModel?.previewUrl)
+    func openUrl(url: URL?, nilMessage: String) {
+        guard let url = url else {
+            self.view.makeToast(nilMessage, duration: 3.0, position: .top)
+            return
+        }
+        openUrl(url: url)
     }
 
     @objc
     func artistPreviewButtonTapped() {
-        openUrl(url: viewModel?.artistViewUrl)
+        openUrl(url: viewModel?.artistViewUrl, nilMessage: "Sorry, the artist preview is not available for this track".localized())
+    }
+
+    @objc
+    func playButtonTapped() {
+        openUrl(url: viewModel?.previewUrl, nilMessage: "Sorry, the song is not available for this track".localized())
     }
 
     @objc
     func collectionPreviewButtonTapped() {
-        openUrl(url: viewModel?.collectionViewUrl)
+        openUrl(url: viewModel?.collectionViewUrl, nilMessage: "Sorry, the collection preview is not available for this track".localized())
     }
 }
