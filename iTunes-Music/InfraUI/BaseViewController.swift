@@ -39,7 +39,6 @@ class BaseViewController: UIViewController {
         setupViews()
         setupConstraints()
         setupSubscribes()
-        fetchData()
     }
 
     // MARK: - Setup
@@ -58,10 +57,7 @@ class BaseViewController: UIViewController {
 
     }
 
-    /// Abstract method. Subclasses should override this method to setup their view.
-    open func fetchData() {
-
-    }
+    // MARK: - Utils Function
 
     open func spinnerSectionController() -> ListSingleSectionController {
         let configureBlock = { (_: Any, cell: UICollectionViewCell) in
