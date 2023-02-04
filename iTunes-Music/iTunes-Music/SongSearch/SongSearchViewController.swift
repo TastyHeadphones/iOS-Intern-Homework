@@ -18,14 +18,6 @@ class SongSearchViewController: BaseViewController {
 
     var searchSongs: [SongSearchCellViewModel] = []
 
-    private var cancellableSet: Set<AnyCancellable> = []
-
-    let titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "HomeTitle".localized()
-        return label
-    }()
-
     let searchBar = UISearchBar()
     var searchBarString = ""
 
@@ -69,8 +61,8 @@ class SongSearchViewController: BaseViewController {
 
     override func setupViews() {
         view.backgroundColor = .white
+        navigationController?.navigationBar.topItem?.title = "HomeTitle".localized()
         view.addSubview(searchBar)
-        view.addSubview(titleLabel)
         view.addSubview(searchSongsListView)
         searchBar.delegate = self
         adapter.collectionView = searchSongsListView
@@ -80,12 +72,8 @@ class SongSearchViewController: BaseViewController {
     }
 
     override func setupConstraints() {
-        titleLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-        }
         searchBar.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(Spacing.small)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.leading.trailing.equalToSuperview()
         }
         searchSongsListView.snp.makeConstraints { make in
@@ -164,5 +152,10 @@ class SearchSongsSectionController: ListSectionController {
 
     override func didUpdate(to object: Any) {
         self.object = object as? SongSearchCellViewModel
+    }
+
+    override func didSelectItem(at index: Int) {
+        let vc = SongDetailViewController(cellModel: object!)
+        viewController?.navigationController?.pushViewController(vc, animated: true)
     }
 }

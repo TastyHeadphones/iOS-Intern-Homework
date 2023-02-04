@@ -14,4 +14,5 @@ struct Spacing {
     static let large = 20.0
     static let imageHeight = 60.0
     static let cellHeight = 80.0
+    static let detailImageHeight = 320.0
 }

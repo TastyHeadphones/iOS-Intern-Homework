@@ -81,13 +81,18 @@ class SongSearchCell: UICollectionViewCell {
 }
 
 extension SongSearchCell: ListBindable {
-    func bindViewModel(_ viewModel: Any) {
-        guard let viewModel = viewModel as? SongSearchCellViewModel else { return }
+
+    func inflate(_ viewModel: SongSearchCellViewModel) {
         setupViews()
         setupConstraints()
         imageView.sd_setImage(with: viewModel.imageURL)
         collectionNameLabel.text = viewModel.collectionName
         artistNameLabel.text = viewModel.artistName
         trackNameLabel.text = viewModel.trackName
+    }
+
+    func bindViewModel(_ viewModel: Any) {
+        guard let viewModel = viewModel as? SongSearchCellViewModel else { return }
+        inflate(viewModel)
     }
 }
