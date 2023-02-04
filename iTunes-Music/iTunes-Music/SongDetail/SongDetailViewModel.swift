@@ -22,7 +22,7 @@ class SongDetailViewModel {
         self.artworkImageUrl = cellModel.imageURL
         self.artistName = lookupResult.artistName
         self.collectionName = cellModel.collectionName
-        self.releaseDate = cellModel.releaseDate
+        self.releaseDate = cellModel.releaseDate?.toDefinedDateString()
         self.trackName = cellModel.trackName
         self.artistViewUrl = cellModel.artistViewUrl
         self.collectionViewUrl = cellModel.collectionViewUrl
