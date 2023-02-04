@@ -42,6 +42,7 @@ class SongDetailViewController: BaseViewController {
     let trackNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
+        label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: Spacing.large)
         return label
     }()
@@ -49,6 +50,7 @@ class SongDetailViewController: BaseViewController {
     let collectionNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .gray
+        label.numberOfLines = 0
         label.font = label.font.withSize(Spacing.xmedium)
         return label
     }()
@@ -56,6 +58,7 @@ class SongDetailViewController: BaseViewController {
     let artistNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .gray
+        label.numberOfLines = 0
         label.font = label.font.withSize(Spacing.xmedium)
         return label
     }()
@@ -118,19 +121,19 @@ class SongDetailViewController: BaseViewController {
         }
         trackNameLabel.snp.makeConstraints { make in
             make.top.equalTo(imageView.snp.bottom).offset(Spacing.large)
-            make.leading.trailing.equalToSuperview().inset(Spacing.large)
+            make.leading.trailing.equalTo(imageView)
         }
         collectionNameLabel.snp.makeConstraints { make in
             make.top.equalTo(trackNameLabel.snp.bottom).offset(Spacing.medium)
-            make.leading.trailing.equalToSuperview().inset(Spacing.large)
+            make.leading.trailing.equalTo(imageView)
         }
         artistNameLabel.snp.makeConstraints { make in
             make.top.equalTo(collectionNameLabel.snp.bottom).offset(Spacing.medium)
-            make.leading.trailing.equalToSuperview().inset(Spacing.large)
+            make.leading.trailing.equalTo(imageView)
         }
         releaseDateNameLabel.snp.makeConstraints { make in
             make.top.equalTo(artistNameLabel.snp.bottom).offset(Spacing.medium)
-            make.leading.trailing.equalToSuperview().inset(Spacing.large)
+            make.leading.trailing.equalTo(imageView)
         }
         artistPreviewButton.snp.makeConstraints { make in
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
