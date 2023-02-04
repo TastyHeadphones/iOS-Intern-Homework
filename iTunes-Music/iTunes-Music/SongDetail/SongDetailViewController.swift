@@ -15,7 +15,7 @@ class SongDetailViewController: BaseViewController {
     let dataService: SongDetailDataservice
 
     let cellModel: SongSearchCellViewModel
-    
+
     var viewModel: SongDetailViewModel? {
         didSet {
             imageView.sd_setImage(with: viewModel?.artworkImageUrl)

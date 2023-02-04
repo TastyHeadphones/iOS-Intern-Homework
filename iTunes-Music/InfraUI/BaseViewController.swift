@@ -12,7 +12,7 @@ import WebKit
 import Combine
 
 class BaseViewController: UIViewController {
-    
+
     // MARK: - Constants
 
     static let spinToken = "spinner"
