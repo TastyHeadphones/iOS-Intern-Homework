@@ -18,8 +18,6 @@ class SongSearchViewController: BaseViewController {
 
     var searchSongs: [SongSearchCellViewModel] = []
 
-    private var cancellableSet: Set<AnyCancellable> = []
-
     let searchBar = UISearchBar()
     var searchBarString = ""
 
@@ -157,7 +155,7 @@ class SearchSongsSectionController: ListSectionController {
     }
 
     override func didSelectItem(at index: Int) {
-        let vc = SongDetailViewController()
+        let vc = SongDetailViewController(cellModel: object!)
         viewController?.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 class SongDetailViewModel {
     let artworkImageUrl: URL?
     let collectionName: String?
+    let artistName: String?
     let releaseDate: String?
     let trackName: String?
     let artistViewUrl: URL?
@@ -18,7 +19,8 @@ class SongDetailViewModel {
 
     // Lookup API doesn't hava collectionName and trackName which need to pass from cell
     init(lookupResult: ItunesLookupResult, cellModel: SongSearchCellViewModel) {
-        self.artworkImageUrl = URL(string: lookupResult.artistLinkUrl ?? "")
+        self.artworkImageUrl = cellModel.imageURL
+        self.artistName = lookupResult.artistName
         self.collectionName = cellModel.collectionName
         self.releaseDate = cellModel.releaseDate
         self.trackName = cellModel.trackName

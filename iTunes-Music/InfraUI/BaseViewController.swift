@@ -9,6 +9,7 @@ import UIKit
 import IGListKit
 import SnapKit
 import WebKit
+import Combine
 
 class BaseViewController: UIViewController {
     
@@ -19,6 +20,7 @@ class BaseViewController: UIViewController {
     // MARK: - Properties
 
     open var isLoading = false
+    open var cancellableSet: Set<AnyCancellable> = []
 
     // MARK: - Initializers
 
