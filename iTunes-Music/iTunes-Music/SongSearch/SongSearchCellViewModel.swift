@@ -16,6 +16,7 @@ class SongSearchCellViewModel: ListDiffable {
 
     // Pass these property to SongDetailViewModel which lookup API doesn't have these schema
     let trackId: Int?
+    let artistViewUrl: URL?
     let previewUrl: URL?
     let collectionViewUrl: URL?
     let releaseDate: String?
@@ -28,6 +29,7 @@ class SongSearchCellViewModel: ListDiffable {
 
         self.trackId = searchpResult.trackId
         self.previewUrl = URL(string: searchpResult.previewUrl ?? "")
+        self.artistViewUrl = URL(string: searchpResult.artistViewUrl ?? "")
         self.collectionViewUrl = URL(string: searchpResult.collectionViewUrl ?? "")
         self.releaseDate = searchpResult.releaseDate
     }

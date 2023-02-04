@@ -9,13 +9,14 @@ import Foundation
 import UIKit
 import SnapKit
 import SDWebImage
+import Toast_Swift
 
 class SongDetailViewController: BaseViewController {
 
     let dataService: SongDetailDataservice
 
     let cellModel: SongSearchCellViewModel
-    
+
     var viewModel: SongDetailViewModel? {
         didSet {
             imageView.sd_setImage(with: viewModel?.artworkImageUrl)
@@ -35,12 +36,14 @@ class SongDetailViewController: BaseViewController {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = Spacing.small
         imageView.layer.masksToBounds = true
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
 
     let trackNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
+        label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: Spacing.large)
         return label
     }()
@@ -48,6 +51,7 @@ class SongDetailViewController: BaseViewController {
     let collectionNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .gray
+        label.numberOfLines = 0
         label.font = label.font.withSize(Spacing.xmedium)
         return label
     }()
@@ -55,6 +59,7 @@ class SongDetailViewController: BaseViewController {
     let artistNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .gray
+        label.numberOfLines = 0
         label.font = label.font.withSize(Spacing.xmedium)
         return label
     }()
@@ -117,19 +122,19 @@ class SongDetailViewController: BaseViewController {
         }
         trackNameLabel.snp.makeConstraints { make in
             make.top.equalTo(imageView.snp.bottom).offset(Spacing.large)
-            make.leading.trailing.equalToSuperview().inset(Spacing.large)
+            make.leading.trailing.equalTo(imageView)
         }
         collectionNameLabel.snp.makeConstraints { make in
             make.top.equalTo(trackNameLabel.snp.bottom).offset(Spacing.medium)
-            make.leading.trailing.equalToSuperview().inset(Spacing.large)
+            make.leading.trailing.equalTo(imageView)
         }
         artistNameLabel.snp.makeConstraints { make in
             make.top.equalTo(collectionNameLabel.snp.bottom).offset(Spacing.medium)
-            make.leading.trailing.equalToSuperview().inset(Spacing.large)
+            make.leading.trailing.equalTo(imageView)
         }
         releaseDateNameLabel.snp.makeConstraints { make in
             make.top.equalTo(artistNameLabel.snp.bottom).offset(Spacing.medium)
-            make.leading.trailing.equalToSuperview().inset(Spacing.large)
+            make.leading.trailing.equalTo(imageView)
         }
         artistPreviewButton.snp.makeConstraints { make in
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
@@ -146,8 +151,18 @@ class SongDetailViewController: BaseViewController {
     }
 
     override func setupSubscribes() {
-        dataService.resource.sink { com in
-            print("\(com)")
+        dataService.resource.sink { completion in
+            switch completion {
+            case .finished: break
+            case .failure(let anError):
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else {
+                        return
+                    }
+                    self.view.makeToast(anError.localizedDescription, duration: 3.0, position: .center)
+                    self.imageView.image = UIImage(systemName: "exclamationmark.icloud")
+                }
+            }
         } receiveValue: { [weak self] data in
             guard let self = self else {
                 return
@@ -159,18 +174,26 @@ class SongDetailViewController: BaseViewController {
         }.store(in: &cancellableSet)
     }
 
-    @objc
-    func playButtonTapped() {
-        openUrl(url: viewModel?.previewUrl)
+    func openUrl(url: URL?, nilMessage: String) {
+        guard let url = url else {
+            self.view.makeToast(nilMessage, duration: 3.0, position: .top)
+            return
+        }
+        openUrl(url: url)
     }
 
     @objc
     func artistPreviewButtonTapped() {
-        openUrl(url: viewModel?.artistViewUrl)
+        openUrl(url: viewModel?.artistViewUrl, nilMessage: "Sorry, the artist preview is not available for this track".localized())
+    }
+
+    @objc
+    func playButtonTapped() {
+        openUrl(url: viewModel?.previewUrl, nilMessage: "Sorry, the song is not available for this track".localized())
     }
 
     @objc
     func collectionPreviewButtonTapped() {
-        openUrl(url: viewModel?.collectionViewUrl)
+        openUrl(url: viewModel?.collectionViewUrl, nilMessage: "Sorry, the collection preview is not available for this track".localized())
     }
 }
