@@ -10,6 +10,7 @@ import Combine
 import Localize_Swift
 import SnapKit
 import IGListKit
+import Toast_Swift
 
 class SongSearchViewController: BaseViewController {
 
@@ -31,8 +32,24 @@ class SongSearchViewController: BaseViewController {
         didSet {
             cancellableSet.removeAll()
             isLoading = true
-            dataService.resource.sink { com in
-                print("\(com) offset= \(self.offset)")
+            dataService.resource.sink { completion in
+                self.isLoading = false
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else {
+                        return
+                    }
+                    self.adapter.performUpdates(animated: true, completion: nil)
+                }
+                switch completion {
+                case .finished: break
+                case .failure(let anError):
+                    DispatchQueue.main.async { [weak self] in
+                        guard let self = self else {
+                            return
+                        }
+                        self.view.makeToast(anError.localizedDescription, duration: 3.0, position: .center)
+                    }
+                }
             } receiveValue: { [weak self] data in
                 guard let self = self else {
                     return
@@ -41,11 +58,6 @@ class SongSearchViewController: BaseViewController {
                     return
                 }
                 self.searchSongs.append(contentsOf: data)
-                self.isLoading = false
-                print(self.searchSongs.count)
-                DispatchQueue.main.async {
-                    self.adapter.performUpdates(animated: true, completion: nil)
-                }
             }.store(in: &cancellableSet)
         }
     }
@@ -129,7 +141,10 @@ extension SongSearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         offset = 0
         searchSongs.removeAll()
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
             self.adapter.performUpdates(animated: true, completion: nil)
         }
         dataService = SongSearchDataService(term: searchBarString, offset: offset)

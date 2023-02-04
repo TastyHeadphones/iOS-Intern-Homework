@@ -36,6 +36,7 @@ class SongDetailViewController: BaseViewController {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = Spacing.small
         imageView.layer.masksToBounds = true
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
 
@@ -150,8 +151,18 @@ class SongDetailViewController: BaseViewController {
     }
 
     override func setupSubscribes() {
-        dataService.resource.sink { com in
-            print("\(com)")
+        dataService.resource.sink { completion in
+            switch completion {
+            case .finished: break
+            case .failure(let anError):
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else {
+                        return
+                    }
+                    self.view.makeToast(anError.localizedDescription, duration: 3.0, position: .center)
+                    self.imageView.image = UIImage(systemName: "exclamationmark.icloud")
+                }
+            }
         } receiveValue: { [weak self] data in
             guard let self = self else {
                 return
