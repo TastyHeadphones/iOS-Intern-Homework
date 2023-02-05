@@ -10,7 +10,7 @@ import LayoutTest
 
 class SongDetailViewControllerLayoutTests: LayoutTestCase {
     func testLayout() {
-        runLayoutTests(withViewProvider: SongDetailViewController.self) { view, _, context in
+        runLayoutTests(withViewProvider: SongDetailViewController.self) { _, _, context in
             accessibilityTestsEnabled = false
             guard let vc = context as? SongDetailViewController else {
                 XCTAssert(false)
@@ -28,10 +28,10 @@ class SongDetailViewControllerLayoutTests: LayoutTestCase {
 }
 
 extension SongDetailViewController: ViewProvider {
-    public static func dataSpecForTest() -> [AnyHashable : Any] {
+    public static func dataSpecForTest() -> [AnyHashable: Any] {
         return [:]
     }
-    public static func view(forData data: [AnyHashable : Any], reuse reuseView: UIView?, size: ViewSize?, context: AutoreleasingUnsafeMutablePointer<AnyObject?>?) -> UIView {
+    public static func view(forData data: [AnyHashable: Any], reuse reuseView: UIView?, size: ViewSize?, context: AutoreleasingUnsafeMutablePointer<AnyObject?>?) -> UIView {
         let vc = SongDetailViewController(cellModel: Mocker.songSearchCellViewModel)
         context?.pointee = vc
         return vc.view
