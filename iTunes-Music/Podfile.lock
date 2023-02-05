@@ -2,6 +2,31 @@ PODS:
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
+  - LayoutTest/Swift (6.0.2):
+    - LayoutTest/SwiftSubspec
+  - LayoutTest/SwiftSubspec (6.0.2):
+    - LayoutTest/TestCase
+    - LayoutTestBase/Swift (= 6.0.2)
+  - LayoutTest/TestCase (6.0.2):
+    - LayoutTestBase/Autolayout (= 6.0.2)
+    - LayoutTestBase/Catalog (= 6.0.2)
+    - LayoutTestBase/Config (= 6.0.2)
+    - LayoutTestBase/Core (= 6.0.2)
+    - LayoutTestBase/UIViewHelpers (= 6.0.2)
+  - LayoutTestBase/Autolayout (6.0.2)
+  - LayoutTestBase/Catalog (6.0.2):
+    - LayoutTestBase/Core
+  - LayoutTestBase/Config (6.0.2)
+  - LayoutTestBase/Core (6.0.2):
+    - LayoutTestBase/Config
+  - LayoutTestBase/Swift (6.0.2):
+    - LayoutTestBase/Autolayout
+    - LayoutTestBase/Catalog
+    - LayoutTestBase/Config
+    - LayoutTestBase/Core
+    - LayoutTestBase/UIViewHelpers
+  - LayoutTestBase/UIViewHelpers (6.0.2):
+    - LayoutTestBase/Config
   - Localize-Swift (3.2.0):
     - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
     - Localize-Swift/UIKit (= 3.2.0)
@@ -16,6 +41,7 @@ PODS:
 
 DEPENDENCIES:
   - IGListKit
+  - LayoutTest/Swift
   - Localize-Swift
   - SDWebImage (~> 5.0)
   - SnapKit
@@ -25,6 +51,8 @@ SPEC REPOS:
   trunk:
     - IGListDiffKit
     - IGListKit
+    - LayoutTest
+    - LayoutTestBase
     - Localize-Swift
     - SDWebImage
     - SnapKit
@@ -33,11 +61,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
+  LayoutTest: 00b3c69e08d1ec224325f4419ffb00cdf5543b52
+  LayoutTestBase: 547972ba5ba020594d9764dfccee9bcce12da8ac
   Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
   SDWebImage: 9bec4c5cdd9579e1f57104735ee0c37df274d593
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: b9530865e33008b832f50af391255ae51dbebdb9
+PODFILE CHECKSUM: 2772db072be26c3cc02e97207bf1810eed7e202a
 
 COCOAPODS: 1.11.3

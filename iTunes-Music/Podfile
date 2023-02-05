@@ -11,6 +11,7 @@ target 'iTunes-Music' do
   # Pods for iTunes-Music
 
   target 'iTunes-MusicTests' do
+	pod 'LayoutTest/Swift'
   end
 
   target 'iTunes-MusicUITests' do
