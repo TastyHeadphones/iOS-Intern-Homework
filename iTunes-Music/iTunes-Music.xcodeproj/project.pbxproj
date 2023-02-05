@@ -809,7 +809,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 989B4B6F911260B29B1716A5 /* Pods-iTunes-Music-iTunes-MusicTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -837,7 +837,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D02CEEF7940306C7365A44A /* Pods-iTunes-Music-iTunes-MusicTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -864,7 +864,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5531283DFB5CB850BDB9FAB8 /* Pods-iTunes-Music-iTunes-MusicUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4WN46VZ7RJ;
@@ -883,7 +883,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7BC484D7777B3DAB573AC12 /* Pods-iTunes-Music-iTunes-MusicUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4WN46VZ7RJ;
