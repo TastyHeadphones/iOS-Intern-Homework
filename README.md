@@ -30,6 +30,9 @@ Features
 - [x] Show music detail's infos preview
 - [x] Handling of poor network conditions
 - [x] Handling of empty data
+- [x] Unit tests
+- [ ] A11y support
+- [ ] UI tests
 - [ ] Using gradle to manage project dependencies
 - [ ] Using bazel to build the project
 - [ ] Migration to [AlomoFire](https://github.com/Alamofire/Alamofire)

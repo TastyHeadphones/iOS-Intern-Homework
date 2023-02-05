@@ -140,6 +140,7 @@ extension SongSearchViewController: UISearchBarDelegate {
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         offset = 0
+        searchBar.endEditing(true)
         searchSongs.removeAll()
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {
