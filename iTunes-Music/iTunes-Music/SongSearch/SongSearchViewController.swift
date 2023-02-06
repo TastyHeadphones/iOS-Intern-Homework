@@ -160,18 +160,21 @@ class SearchSongsSectionController: ListSectionController {
         return CGSize(width: collectionContext!.containerSize.width, height: Spacing.cellHeight)
     }
 
+    // swiftlint:disable force_cast
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        let cell: SongSearchCell = collectionContext?.dequeueReusableCell(of: SongSearchCell.self, for: self, at: index) as! SongSearchCell
+        let cell: SongSearchCell = collectionContext?.dequeueReusableCell(
+            of: SongSearchCell.self,
+            for: self, at: index) as! SongSearchCell
         cell.bindViewModel(object!)
         return cell
     }
-
+    // swiftlint:enable force_cast
     override func didUpdate(to object: Any) {
         self.object = object as? SongSearchCellViewModel
     }
 
     override func didSelectItem(at index: Int) {
-        let vc = SongDetailViewController(cellModel: object!)
-        viewController?.navigationController?.pushViewController(vc, animated: true)
+        let detailVC = SongDetailViewController(cellModel: object!)
+        viewController?.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

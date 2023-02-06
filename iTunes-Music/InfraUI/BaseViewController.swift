@@ -94,12 +94,12 @@ class BaseViewController: UIViewController {
             return
         }
         let webView = WKWebView()
-        let vc = UIViewController()
-        vc.view.addSubview(webView)
+        let webVC = UIViewController()
+        webVC.view.addSubview(webView)
         webView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
         webView.load(URLRequest(url: url))
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(webVC, animated: true)
     }
 }

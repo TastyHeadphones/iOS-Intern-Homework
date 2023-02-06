@@ -37,8 +37,8 @@
 		37A9C47A298404B800F3A8DF /* iTunes_Music.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C478298404B800F3A8DF /* iTunes_Music.xcdatamodeld */; };
 		37A9C47C298404BA00F3A8DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A9C47B298404BA00F3A8DF /* Assets.xcassets */; };
 		37A9C47F298404BA00F3A8DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9C47D298404BA00F3A8DF /* LaunchScreen.storyboard */; };
-		37A9C494298404BA00F3A8DF /* iTunes_MusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C493298404BA00F3A8DF /* iTunes_MusicUITests.swift */; };
-		37A9C496298404BA00F3A8DF /* iTunes_MusicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C495298404BA00F3A8DF /* iTunes_MusicUITestsLaunchTests.swift */; };
+		37A9C494298404BA00F3A8DF /* ITunesMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C493298404BA00F3A8DF /* ITunesMusicUITests.swift */; };
+		37A9C496298404BA00F3A8DF /* ITunesMusicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C495298404BA00F3A8DF /* ITunesMusicUITestsLaunchTests.swift */; };
 		CD0101BFC1EA69D7A0C983A2 /* Pods_iTunes_Music.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC1787D5B92403712B96FDA /* Pods_iTunes_Music.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,8 +97,8 @@
 		37A9C480298404BA00F3A8DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A9C485298404BA00F3A8DF /* iTunes-MusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iTunes-MusicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A9C48F298404BA00F3A8DF /* iTunes-MusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iTunes-MusicUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		37A9C493298404BA00F3A8DF /* iTunes_MusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunes_MusicUITests.swift; sourceTree = "<group>"; };
-		37A9C495298404BA00F3A8DF /* iTunes_MusicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunes_MusicUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		37A9C493298404BA00F3A8DF /* ITunesMusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesMusicUITests.swift; sourceTree = "<group>"; };
+		37A9C495298404BA00F3A8DF /* ITunesMusicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesMusicUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4D02CEEF7940306C7365A44A /* Pods-iTunes-Music-iTunes-MusicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunes-Music-iTunes-MusicTests.release.xcconfig"; path = "Target Support Files/Pods-iTunes-Music-iTunes-MusicTests/Pods-iTunes-Music-iTunes-MusicTests.release.xcconfig"; sourceTree = "<group>"; };
 		5531283DFB5CB850BDB9FAB8 /* Pods-iTunes-Music-iTunes-MusicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunes-Music-iTunes-MusicUITests.debug.xcconfig"; path = "Target Support Files/Pods-iTunes-Music-iTunes-MusicUITests/Pods-iTunes-Music-iTunes-MusicUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A91C1AB12035F1D9E4EC7D7 /* Pods_iTunes_Music_iTunes_MusicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunes_Music_iTunes_MusicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,8 +271,8 @@
 		37A9C492298404BA00F3A8DF /* iTunes-MusicUITests */ = {
 			isa = PBXGroup;
 			children = (
-				37A9C493298404BA00F3A8DF /* iTunes_MusicUITests.swift */,
-				37A9C495298404BA00F3A8DF /* iTunes_MusicUITestsLaunchTests.swift */,
+				37A9C493298404BA00F3A8DF /* ITunesMusicUITests.swift */,
+				37A9C495298404BA00F3A8DF /* ITunesMusicUITestsLaunchTests.swift */,
 			);
 			path = "iTunes-MusicUITests";
 			sourceTree = "<group>";
@@ -591,8 +591,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A9C496298404BA00F3A8DF /* iTunes_MusicUITestsLaunchTests.swift in Sources */,
-				37A9C494298404BA00F3A8DF /* iTunes_MusicUITests.swift in Sources */,
+				37A9C496298404BA00F3A8DF /* ITunesMusicUITestsLaunchTests.swift in Sources */,
+				37A9C494298404BA00F3A8DF /* ITunesMusicUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

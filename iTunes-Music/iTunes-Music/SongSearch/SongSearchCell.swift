@@ -81,7 +81,11 @@ class SongSearchCell: UICollectionViewCell {
             make.trailing.equalToSuperview().inset(Spacing.medium)
             make.top.equalTo(trackNameLabel.snp.bottom).offset(Spacing.medium)
         }
-        separator.frame = CGRect(x: 0, y: containerView.bounds.height, width: containerView.bounds.width, height: CGFloat(Spacing.point))
+        separator.frame = CGRect(
+            x: 0,
+            y: containerView.bounds.height,
+            width: containerView.bounds.width,
+            height: CGFloat(Spacing.point))
     }
 }
 
