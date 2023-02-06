@@ -1,13 +1,13 @@
 //
-//  iTunes_MusicUITestsLaunchTests.swift
-//  iTunes-MusicUITests
+//  iTunesMusicUITestsLaunchTests.swift
+//  iTunesMusicUITests
 //
 //  Created by Magic Keegan on 1/27/23.
 //
 
 import XCTest
 
-final class iTunes_MusicUITestsLaunchTests: XCTestCase {
+final class ITunesMusicUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

@@ -30,7 +30,10 @@ extension SongSearchCell: ViewProvider {
     public static func dataSpecForTest() -> [AnyHashable: Any] {
         return [:]
     }
-    public static func view(forData data: [AnyHashable: Any], reuse reuseView: UIView?, size: ViewSize?, context: AutoreleasingUnsafeMutablePointer<AnyObject?>?) -> UIView {
+    public static func view(forData data: [AnyHashable: Any],
+                            reuse reuseView: UIView?,
+                            size: ViewSize?,
+                            context: AutoreleasingUnsafeMutablePointer<AnyObject?>?) -> UIView {
         let cell = SongSearchCell()
         return cell
     }

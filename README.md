@@ -31,6 +31,7 @@ Features
 - [x] Handling of poor network conditions
 - [x] Handling of empty data
 - [x] Unit tests
+- [x] Github Action CI for unit tests and SwiftLint
 - [ ] A11y support
 - [ ] UI tests
 - [ ] Using gradle to manage project dependencies

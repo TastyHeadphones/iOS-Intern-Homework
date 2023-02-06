@@ -184,16 +184,22 @@ class SongDetailViewController: BaseViewController {
 
     @objc
     func artistPreviewButtonTapped() {
-        openUrl(url: viewModel?.artistViewUrl, nilMessage: "Sorry, the artist preview is not available for this track".localized())
+        openUrl(
+            url: viewModel?.artistViewUrl,
+            nilMessage: "Sorry, the artist preview is not available for this track".localized())
     }
 
     @objc
     func playButtonTapped() {
-        openUrl(url: viewModel?.previewUrl, nilMessage: "Sorry, the song is not available for this track".localized())
+        openUrl(
+            url: viewModel?.previewUrl,
+            nilMessage: "Sorry, the song is not available for this track".localized())
     }
 
     @objc
     func collectionPreviewButtonTapped() {
-        openUrl(url: viewModel?.collectionViewUrl, nilMessage: "Sorry, the collection preview is not available for this track".localized())
+        openUrl(
+            url: viewModel?.collectionViewUrl,
+            nilMessage: "Sorry, the collection preview is not available for this track".localized())
     }
 }
