@@ -1,3 +1,7 @@
+[![Run Test Suite](https://github.com/TastyHeadphones/iOS-Intern-Homework/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/TastyHeadphones/iOS-Intern-Homework/actions/workflows/tests.yml)
+[![SwiftLint](https://github.com/TastyHeadphones/iOS-Intern-Homework/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/TastyHeadphones/iOS-Intern-Homework/actions/workflows/tests.yml)
+
+
 # iOS-Intern-Homework
 2023 iOS Intern Homework iTunes Music App
 
