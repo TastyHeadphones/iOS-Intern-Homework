@@ -23,6 +23,8 @@
 		37053535298A55A500131066 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37053534298A55A500131066 /* UIColor+Extension.swift */; };
 		371C62542989FB96007BF028 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C62532989FB96007BF028 /* Spacing.swift */; };
 		371C6257298A0E46007BF028 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 371C6259298A0E46007BF028 /* Localizable.strings */; };
+		377B10E329961256005DE5F8 /* SongSearchA11Y.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B10E229961256005DE5F8 /* SongSearchA11Y.swift */; };
+		377B10E529961460005DE5F8 /* SongDetailA11Y.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B10E429961460005DE5F8 /* SongDetailA11Y.swift */; };
 		379BFB17298CD23300D5E2BE /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379BFB16298CD23300D5E2BE /* SongDetailViewController.swift */; };
 		379BFB19298CF16500D5E2BE /* SongDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379BFB18298CF16500D5E2BE /* SongDetailViewModel.swift */; };
 		379BFB1B298D3F4700D5E2BE /* SongDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379BFB1A298D3F4700D5E2BE /* SongDetailRepository.swift */; };
@@ -79,6 +81,8 @@
 		371C6258298A0E46007BF028 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		371C625C298A0F4F007BF028 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		371C625E298A0F60007BF028 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		377B10E229961256005DE5F8 /* SongSearchA11Y.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchA11Y.swift; sourceTree = "<group>"; };
+		377B10E429961460005DE5F8 /* SongDetailA11Y.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailA11Y.swift; sourceTree = "<group>"; };
 		379BFB16298CD23300D5E2BE /* SongDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
 		379BFB18298CF16500D5E2BE /* SongDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailViewModel.swift; sourceTree = "<group>"; };
 		379BFB1A298D3F4700D5E2BE /* SongDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailRepository.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 		37006B8E2987883600A1EC59 /* SongSearch */ = {
 			isa = PBXGroup;
 			children = (
+				377B10E129960C98005DE5F8 /* A11Y */,
 				375BB8E629934911000EB309 /* View */,
 				375BB8E729934930000EB309 /* Data */,
 			);
@@ -231,9 +236,26 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		377B10E029960C82005DE5F8 /* A11Y */ = {
+			isa = PBXGroup;
+			children = (
+				377B10E429961460005DE5F8 /* SongDetailA11Y.swift */,
+			);
+			path = A11Y;
+			sourceTree = "<group>";
+		};
+		377B10E129960C98005DE5F8 /* A11Y */ = {
+			isa = PBXGroup;
+			children = (
+				377B10E229961256005DE5F8 /* SongSearchA11Y.swift */,
+			);
+			path = A11Y;
+			sourceTree = "<group>";
+		};
 		379BFB15298CA0FE00D5E2BE /* SongDetail */ = {
 			isa = PBXGroup;
 			children = (
+				377B10E029960C82005DE5F8 /* A11Y */,
 				375BB8E829934942000EB309 /* View */,
 				375BB8E92993494E000EB309 /* Data */,
 			);
@@ -590,9 +612,11 @@
 				379BFB1D298D4AB700D5E2BE /* SongDetailDataservice.swift in Sources */,
 				379BFB1B298D3F4700D5E2BE /* SongDetailRepository.swift in Sources */,
 				3705352F298A413E00131066 /* SpinnerCell.swift in Sources */,
+				377B10E329961256005DE5F8 /* SongSearchA11Y.swift in Sources */,
 				37006B8C298768C000A1EC59 /* ItunesSearchResult.swift in Sources */,
 				37006B7C29853C1700A1EC59 /* BaseViewController.swift in Sources */,
 				37006B89298767EE00A1EC59 /* BaseRepository.swift in Sources */,
+				377B10E529961460005DE5F8 /* SongDetailA11Y.swift in Sources */,
 				37053535298A55A500131066 /* UIColor+Extension.swift in Sources */,
 				379BFB21298E87BF00D5E2BE /* String+Date.swift in Sources */,
 				37A9C47A298404B800F3A8DF /* iTunes_Music.xcdatamodeld in Sources */,
