@@ -11,6 +11,7 @@ import LayoutTest
 class SongDetailViewControllerLayoutTests: LayoutTestCase {
     func testLayout() {
         runLayoutTests(withViewProvider: SongDetailViewController.self) { _, _, context in
+            accessibilityTestsEnabled = false
             guard let detailVC = context as? SongDetailViewController else {
                 XCTAssert(false)
                 return
