@@ -75,6 +75,8 @@ class SongDetailViewController: BaseViewController {
         let button = UIButton()
         button.setImage(UIImage(systemName: "play"), for: .normal)
         button.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
+        button.accessibilityIdentifier = SongDetailA11Y.playButtonIdentifier
+        button.accessibilityLabel = SongDetailA11Y.playButtonLabel
         return button
     }()
 
@@ -82,6 +84,8 @@ class SongDetailViewController: BaseViewController {
         let button = UIButton()
         button.setImage(UIImage(systemName: "person"), for: .normal)
         button.addTarget(self, action: #selector(artistPreviewButtonTapped), for: .touchUpInside)
+        button.accessibilityIdentifier = SongDetailA11Y.artistPreviewButtonIdentifier
+        button.accessibilityLabel = SongDetailA11Y.artistPreviewButtonLabel
         return button
     }()
 
@@ -89,6 +93,8 @@ class SongDetailViewController: BaseViewController {
         let button = UIButton()
         button.setImage(UIImage(systemName: "list.bullet"), for: .normal)
         button.addTarget(self, action: #selector(collectionPreviewButtonTapped), for: .touchUpInside)
+        button.accessibilityIdentifier = SongDetailA11Y.collectionPreviewButtonIdentifier
+        button.accessibilityLabel = SongDetailA11Y.collectionPreviewButtonLabel
         return button
     }()
 

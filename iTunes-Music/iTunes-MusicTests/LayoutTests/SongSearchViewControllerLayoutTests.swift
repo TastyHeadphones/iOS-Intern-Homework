@@ -11,13 +11,12 @@ import LayoutTest
 class SongSearchViewControllerLayoutTests: LayoutTestCase {
     func testLayout() {
         runLayoutTests(withViewProvider: SongSearchViewController.self) { _, _, context in
-            accessibilityTestsEnabled = false
             viewOverlapTestsEnabled = false
             guard let searchVC = context as? SongSearchViewController else {
                 XCTAssert(false)
                 return
             }
-            searchVC.searchBar.lyt_above(searchVC.searchSongsListView)
+            XCTAssertTrue(searchVC.searchBar.lyt_above(searchVC.searchSongsListView))
         }
     }
 }

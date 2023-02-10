@@ -19,7 +19,13 @@ class SongSearchViewController: BaseViewController {
 
     var searchSongs: [SongSearchCellViewModel] = []
 
-    let searchBar = UISearchBar()
+    let searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.searchTextField.accessibilityIdentifier = SongSearchA11Y.searchBarIdentifier
+        searchBar.searchTextField.accessibilityLabel = SongSearchA11Y.searchBarLabel
+        return searchBar
+    }()
+
     var searchBarString = ""
 
     let searchSongsListView: ListCollectionView = ListCollectionView()

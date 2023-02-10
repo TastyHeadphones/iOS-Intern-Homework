@@ -36,7 +36,7 @@ Features
 - [x] Handling of empty data
 - [x] Unit tests
 - [x] Github Action CI for unit tests and SwiftLint
-- [ ] A11y support
+- [x] A11y support
 - [ ] UI tests
 - [ ] Using gradle to manage project dependencies
 - [ ] Using bazel to build the project
