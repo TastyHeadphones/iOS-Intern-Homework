@@ -2,19 +2,15 @@ platform :ios, '13.0'
 use_frameworks!
 
 target 'iTunes-Music' do
-  pod 'IGListKit'
-  pod 'SnapKit'
-  pod 'Localize-Swift'
-  pod 'Toast-Swift'
+  pod 'IGListKit' , '~> 4.0.0'
+  pod 'SnapKit' , '~> 5.6.0'
+  pod 'Localize-Swift' , '~> 3.2'
+  pod 'Toast-Swift' , '~> 5.0.1'
   pod 'SDWebImage', '~> 5.0'
 
   # Pods for iTunes-Music
-
   target 'iTunes-MusicTests' do
 	pod 'LayoutTest/Swift'
-  end
-
-  target 'iTunes-MusicUITests' do
   end
 
 end
