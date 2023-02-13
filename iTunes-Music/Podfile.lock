@@ -33,19 +33,19 @@ PODS:
   - Localize-Swift/LocalizeSwiftCore (3.2.0)
   - Localize-Swift/UIKit (3.2.0):
     - Localize-Swift/LocalizeSwiftCore
-  - SDWebImage (5.15.0):
-    - SDWebImage/Core (= 5.15.0)
-  - SDWebImage/Core (5.15.0)
+  - SDWebImage (5.15.2):
+    - SDWebImage/Core (= 5.15.2)
+  - SDWebImage/Core (5.15.2)
   - SnapKit (5.6.0)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
-  - IGListKit
+  - IGListKit (~> 4.0.0)
   - LayoutTest/Swift
-  - Localize-Swift
+  - Localize-Swift (~> 3.2)
   - SDWebImage (~> 5.0)
-  - SnapKit
-  - Toast-Swift
+  - SnapKit (~> 5.6.0)
+  - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
   trunk:
@@ -64,10 +64,10 @@ SPEC CHECKSUMS:
   LayoutTest: 00b3c69e08d1ec224325f4419ffb00cdf5543b52
   LayoutTestBase: 547972ba5ba020594d9764dfccee9bcce12da8ac
   Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
-  SDWebImage: 9bec4c5cdd9579e1f57104735ee0c37df274d593
+  SDWebImage: 8ab87d4b3e5cc4927bd47f78db6ceb0b94442577
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 2772db072be26c3cc02e97207bf1810eed7e202a
+PODFILE CHECKSUM: 9951e8093e5a17a3a0a77d1b00426c45a0ea4a14
 
 COCOAPODS: 1.11.3
