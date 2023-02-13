@@ -9,12 +9,8 @@ target 'iTunes-Music' do
   pod 'SDWebImage', '~> 5.0'
 
   # Pods for iTunes-Music
-
   target 'iTunes-MusicTests' do
 	pod 'LayoutTest/Swift'
-  end
-
-  target 'iTunes-MusicUITests' do
   end
 
 end
