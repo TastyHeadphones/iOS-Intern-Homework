@@ -38,6 +38,8 @@
 		37A9C47A298404B800F3A8DF /* iTunes_Music.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C478298404B800F3A8DF /* iTunes_Music.xcdatamodeld */; };
 		37A9C47C298404BA00F3A8DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A9C47B298404BA00F3A8DF /* Assets.xcassets */; };
 		37A9C47F298404BA00F3A8DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A9C47D298404BA00F3A8DF /* LaunchScreen.storyboard */; };
+		37E74FE5299B576D008697C0 /* SongSearchTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E74FE4299B576D008697C0 /* SongSearchTransformerTests.swift */; };
+		37E74FE7299B5799008697C0 /* SongDetailTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E74FE6299B5799008697C0 /* SongDetailTransformerTests.swift */; };
 		CD0101BFC1EA69D7A0C983A2 /* Pods_iTunes_Music.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC1787D5B92403712B96FDA /* Pods_iTunes_Music.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,8 @@
 		37A9C47E298404BA00F3A8DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37A9C480298404BA00F3A8DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A9C485298404BA00F3A8DF /* iTunes-MusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iTunes-MusicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37E74FE4299B576D008697C0 /* SongSearchTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchTransformerTests.swift; sourceTree = "<group>"; };
+		37E74FE6299B5799008697C0 /* SongDetailTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailTransformerTests.swift; sourceTree = "<group>"; };
 		4D02CEEF7940306C7365A44A /* Pods-iTunes-Music-iTunes-MusicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunes-Music-iTunes-MusicTests.release.xcconfig"; path = "Target Support Files/Pods-iTunes-Music-iTunes-MusicTests/Pods-iTunes-Music-iTunes-MusicTests.release.xcconfig"; sourceTree = "<group>"; };
 		5531283DFB5CB850BDB9FAB8 /* Pods-iTunes-Music-iTunes-MusicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunes-Music-iTunes-MusicUITests.debug.xcconfig"; path = "Target Support Files/Pods-iTunes-Music-iTunes-MusicUITests/Pods-iTunes-Music-iTunes-MusicUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A91C1AB12035F1D9E4EC7D7 /* Pods_iTunes_Music_iTunes_MusicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunes_Music_iTunes_MusicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,10 +297,20 @@
 		37A9C488298404BA00F3A8DF /* iTunes-MusicTests */ = {
 			isa = PBXGroup;
 			children = (
+				37E74FE3299B5722008697C0 /* TransformerrTests */,
 				379BFB28298F2FA800D5E2BE /* LayoutTests */,
 				379BFB2B298F327700D5E2BE /* Mocker.swift */,
 			);
 			path = "iTunes-MusicTests";
+			sourceTree = "<group>";
+		};
+		37E74FE3299B5722008697C0 /* TransformerrTests */ = {
+			isa = PBXGroup;
+			children = (
+				37E74FE4299B576D008697C0 /* SongSearchTransformerTests.swift */,
+				37E74FE6299B5799008697C0 /* SongDetailTransformerTests.swift */,
+			);
+			path = TransformerrTests;
 			sourceTree = "<group>";
 		};
 		9B19F2770AD8A5FC480BBDF0 /* Pods */ = {
@@ -535,8 +549,10 @@
 			files = (
 				379BFB30298F483800D5E2BE /* SongSearchCellLayoutTests.swift in Sources */,
 				379BFB2C298F327700D5E2BE /* Mocker.swift in Sources */,
+				37E74FE7299B5799008697C0 /* SongDetailTransformerTests.swift in Sources */,
 				379BFB2A298F300800D5E2BE /* SongDetailViewControllerLayoutTests.swift in Sources */,
 				379BFB2E298F46B800D5E2BE /* SongSearchViewControllerLayoutTests.swift in Sources */,
+				37E74FE5299B576D008697C0 /* SongSearchTransformerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

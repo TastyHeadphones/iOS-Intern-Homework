@@ -10,7 +10,7 @@ import LayoutTestBase
 
 class Mocker {
 
-    static let itunesSearchpResult = ItunesSearchpResult(
+    static var itunesSearchResult: ItunesSearchResult { return ItunesSearchResult(
         wrapperType: StringValues().values.randomElement() as? String,
         kind: StringValues().values.randomElement() as? String,
         artistId: IntegerValues().values.randomElement() as? Int,
@@ -51,8 +51,21 @@ class Mocker {
         longDescription: StringValues().values.randomElement() as? String,
         hasITunesExtras: StringValues().values.randomElement() as? Bool,
         collectionArtistName: StringValues().values.randomElement() as? String)
+    }
 
     static var songSearchCellViewModel: SongSearchCellViewModel {
-        return SongSearchCellViewModel(searchpResult: Self.itunesSearchpResult)
+        return SongSearchCellViewModel(searchResult: Self.itunesSearchResult)
+    }
+
+    static var itunesLookupResult: ItunesLookupResult {
+        return ItunesLookupResult(
+            wrapperType: StringValues().values.randomElement() as? String,
+            artistType: StringValues().values.randomElement() as? String,
+            artistName: StringValues().values.randomElement() as? String,
+            artistLinkUrl: StringValues().values.randomElement() as? String,
+            artistId: IntegerValues().values.randomElement() as? Int,
+            amgArtistId: IntegerValues().values.randomElement() as? Int,
+            primaryGenreName: StringValues().values.randomElement() as? String,
+            primaryGenreId: IntegerValues().values.randomElement() as? Int)
     }
 }

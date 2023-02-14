@@ -1,18 +1,18 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let itunesSearchpResults = try? JSONDecoder().decode(ItunesSearchpResults.self, from: jsonData)
+//   let itunessearchResults = try? JSONDecoder().decode(ItunessearchResults.self, from: jsonData)
 
 import Foundation
 
-// MARK: - ItunesSearchpResults
-struct ItunesSearchpResults: Decodable {
+// MARK: - ItunessearchResults
+struct ItunesSearchResults: Decodable {
     let resultCount: Int
-    let results: [ItunesSearchpResult]
+    let results: [ItunesSearchResult]
 }
 
 // MARK: - Result
-struct ItunesSearchpResult: Decodable {
+struct ItunesSearchResult: Decodable {
     let wrapperType: String?
     let kind: String?
     let artistId: Int?

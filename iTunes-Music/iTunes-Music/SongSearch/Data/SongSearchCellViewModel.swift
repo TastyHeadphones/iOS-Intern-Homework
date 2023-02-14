@@ -21,17 +21,17 @@ class SongSearchCellViewModel: ListDiffable {
     let collectionViewUrl: URL?
     let releaseDate: String?
 
-    init(searchpResult: ItunesSearchpResult) {
-        self.imageURL = URL(string: searchpResult.artworkUrl100 ?? "")
-        self.collectionName = searchpResult.collectionName
-        self.artistName = searchpResult.artistName
-        self.trackName = searchpResult.trackName
+    init(searchResult: ItunesSearchResult) {
+        self.imageURL = URL(string: searchResult.artworkUrl100 ?? "")
+        self.collectionName = searchResult.collectionName
+        self.artistName = searchResult.artistName
+        self.trackName = searchResult.trackName
 
-        self.trackId = searchpResult.trackId
-        self.previewUrl = URL(string: searchpResult.previewUrl ?? "")
-        self.artistViewUrl = URL(string: searchpResult.artistViewUrl ?? "")
-        self.collectionViewUrl = URL(string: searchpResult.collectionViewUrl ?? "")
-        self.releaseDate = searchpResult.releaseDate
+        self.trackId = searchResult.trackId
+        self.previewUrl = URL(string: searchResult.previewUrl ?? "")
+        self.artistViewUrl = URL(string: searchResult.artistViewUrl ?? "")
+        self.collectionViewUrl = URL(string: searchResult.collectionViewUrl ?? "")
+        self.releaseDate = searchResult.releaseDate
     }
 
     func diffIdentifier() -> NSObjectProtocol {

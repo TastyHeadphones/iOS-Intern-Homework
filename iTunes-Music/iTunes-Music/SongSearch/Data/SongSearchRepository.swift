@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SongSearchRepository: BaseRepository<ItunesSearchpResults> {
+class SongSearchRepository: BaseRepository<ItunesSearchResults> {
 
     static let limit = 20
 

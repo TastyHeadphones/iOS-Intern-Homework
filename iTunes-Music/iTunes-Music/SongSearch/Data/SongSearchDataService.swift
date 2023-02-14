@@ -7,14 +7,14 @@
 
 import Foundation
 
-class SongSearchDataService: BaseDataService<ItunesSearchpResults, [SongSearchCellViewModel]> {
+class SongSearchDataService: BaseDataService<ItunesSearchResults, [SongSearchCellViewModel]> {
 
     init(term: String, offset: Int) {
         let repository = SongSearchRepository(term: term, offset: offset)
         super.init(repository: repository)
     }
 
-    override func transform(rawData: ItunesSearchpResults?) -> [SongSearchCellViewModel]? {
+    override func transform(rawData: ItunesSearchResults?) -> [SongSearchCellViewModel]? {
         guard let rawData = rawData else {
             return nil
         }
@@ -26,7 +26,7 @@ class SongSearchDataService: BaseDataService<ItunesSearchpResults, [SongSearchCe
             guard result.trackId != nil else {
                 return nil
             }
-            return SongSearchCellViewModel(searchpResult: result)
+            return SongSearchCellViewModel(searchResult: result)
         }
     }
 }
