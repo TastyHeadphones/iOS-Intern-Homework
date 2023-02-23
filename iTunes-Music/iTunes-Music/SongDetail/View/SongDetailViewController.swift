@@ -123,8 +123,8 @@ class SongDetailViewController: BaseViewController {
     override func setupConstraints() {
         imageView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(Spacing.large)
-            make.width.height.equalTo(Spacing.detailImageHeight)
-            make.centerX.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(Spacing.xmedium)
+            make.height.equalTo(imageView.snp.width)
         }
         trackNameLabel.snp.makeConstraints { make in
             make.top.equalTo(imageView.snp.bottom).offset(Spacing.large)

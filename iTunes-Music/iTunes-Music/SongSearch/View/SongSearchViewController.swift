@@ -141,11 +141,9 @@ extension SongSearchViewController: UIScrollViewDelegate {
 }
 
 extension SongSearchViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchBarString = searchText
-    }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         offset = 0
+        searchBarString = searchBar.text ?? ""
         searchBar.endEditing(true)
         searchSongs.removeAll()
         DispatchQueue.main.async { [weak self] in
