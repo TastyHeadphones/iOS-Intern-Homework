@@ -10,8 +10,11 @@ import Combine
 
 class BaseDataService<T: Decodable, U> {
     private let repository: BaseRepository<T>
-    lazy var resource = repository.resource
-        .map { rawData in return self.transform(rawData: rawData) }
+
+    var resource: Publishers.Map<Publishers.Decode<Publishers.Map<URLSession.DataTaskPublisher, JSONDecoder.Input>, T, JSONDecoder>, U?> {
+        return repository.resource
+            .map { rawData in return self.transform(rawData: rawData) }
+    }
 
     init(repository: BaseRepository<T>) {
         self.repository = repository
