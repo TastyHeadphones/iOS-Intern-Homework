@@ -34,47 +34,39 @@ class SongSearchViewController: BaseViewController {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
     }()
 
-    var dataService: SongSearchDataService {
-        didSet {
-            cancellableSet.removeAll()
-            isLoading = true
-            dataService.resource.sink { completion in
-                self.isLoading = false
+    private func performDataServiceUpdate(with dataService: SongSearchDataService) {
+        isLoading = true
+        dataService.resource.sink { [weak self] completion in
+            guard let self = self else {
+                return
+            }
+            self.cancellableSet.removeAll()
+            self.isLoading = false
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                self.adapter.performUpdates(animated: true, completion: nil)
+            }
+            switch completion {
+            case .finished: break
+            case .failure(let anError):
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self else {
                         return
                     }
-                    self.adapter.performUpdates(animated: true, completion: nil)
+                    self.view.makeToast(anError.localizedDescription, duration: 3.0, position: .center)
                 }
-                switch completion {
-                case .finished: break
-                case .failure(let anError):
-                    DispatchQueue.main.async { [weak self] in
-                        guard let self = self else {
-                            return
-                        }
-                        self.view.makeToast(anError.localizedDescription, duration: 3.0, position: .center)
-                    }
-                }
-            } receiveValue: { [weak self] data in
-                guard let self = self else {
-                    return
-                }
-                guard let data = data else {
-                    return
-                }
-                self.searchSongs.append(contentsOf: data)
-            }.store(in: &cancellableSet)
-        }
-    }
-
-    override init() {
-        self.dataService = SongSearchDataService(term: "", offset: offset)
-        super.init()
-    }
-
-    required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+            }
+        } receiveValue: { [weak self] data in
+            guard let self = self else {
+                return
+            }
+            guard let data = data else {
+                return
+            }
+            self.searchSongs.append(contentsOf: data)
+        }.store(in: &cancellableSet)
     }
 
     override func setupViews() {
@@ -135,7 +127,8 @@ extension SongSearchViewController: UIScrollViewDelegate {
             isLoading = true
             adapter.performUpdates(animated: true, completion: nil)
             offset += Self.offsetStep
-            self.dataService = SongSearchDataService(term: searchBarString, offset: offset)
+            let dataService = SongSearchDataService(term: searchBarString, offset: offset)
+            performDataServiceUpdate(with: dataService)
         }
     }
 }
@@ -152,7 +145,8 @@ extension SongSearchViewController: UISearchBarDelegate {
             }
             self.adapter.performUpdates(animated: true, completion: nil)
         }
-        dataService = SongSearchDataService(term: searchBarString, offset: offset)
+        let dataService = SongSearchDataService(term: searchBarString, offset: offset)
+        performDataServiceUpdate(with: dataService)
     }
 }
 

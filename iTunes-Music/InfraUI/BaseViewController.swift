@@ -22,7 +22,7 @@ class BaseViewController: UIViewController {
     open var isLoading = false
     open var cancellableSet: Set<AnyCancellable> = []
 
-    // MARK: - Initializers
+    // MARK: - Initializers and Deinitializers
 
     public init() {
         super.init(nibName: nil, bundle: nil)
@@ -30,6 +30,10 @@ class BaseViewController: UIViewController {
 
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    deinit {
+        cancellableSet.removeAll()
     }
 
     // MARK: - View Lifecycle
