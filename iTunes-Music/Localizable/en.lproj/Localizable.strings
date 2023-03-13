@@ -1,0 +1,13 @@
+    /*
+  Localizable.strings
+  iTunes-Music
+
+  Created by Magic Keegan on 2/1/23.
+  
+*/
+
+"Search" = "Search";
+"HomeTitle" = "Dcard iOS Intern Homework 🎵";
+"Sorry, the artist preview is not available for this track" = "Sorry, the artist preview is not available for this track";
+"Sorry, the collection preview is not available for this track" = "Sorry, the collection preview is not available for this track";
+"Sorry, the song is not available for this track" = "Sorry, the song is not available for this track";
