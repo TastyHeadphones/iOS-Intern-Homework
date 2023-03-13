@@ -48,7 +48,7 @@ class SongSearchCell: UICollectionViewCell {
     }()
 
     func setupViews() {
-        backgroundColor = .white
+        backgroundColor = .gray
         addSubview(containerView)
         containerView.addSubview(imageView)
         containerView.addSubview(collectionNameLabel)
