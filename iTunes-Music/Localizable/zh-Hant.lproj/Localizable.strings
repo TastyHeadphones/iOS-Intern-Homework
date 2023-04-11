@@ -1,0 +1,13 @@
+    /*
+  Localizable.strings
+  iTunes-Music
+
+  Created by Magic Keegan on 2/1/23.
+  
+*/
+
+"Search" = "搜尋";
+"HomeTitle" = "Dcard iOS 實習生作業 🎵";
+"Sorry, the artist preview is not available for this track" = "抱歉，該唱片沒有歌手詳情頁";
+"Sorry, the collection preview is not available for this track" = "抱歉，該唱片沒有專輯詳情頁";
+"Sorry, the song is not available for this track" = "抱歉，該唱片不支持播放";
